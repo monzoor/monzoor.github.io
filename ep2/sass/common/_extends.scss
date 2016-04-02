@@ -1,0 +1,55 @@
+
+// Font color extend
+%color__font--blue { color:  $text}
+%color__font--secondary { color:  $secondary-text}
+%color__font--hints { color:  $text-hints}
+%color__font--divider { color:  $divider}
+%color__font__dark-bg--main { color:  $darkbg-text-main}
+%color__font--dark-bg--secondary { color:  $darkbg-text-secondary}
+%color__font--link { color:  $link}
+%color__font--white { color:  $white}
+%color__font--yellow { color:  $button-selected}
+%color__font--icon-blue { color:  $blue}
+%color__font--green { color:  $green}
+
+// Social
+%color__font--facebook { color: $facebook; }
+%color__font--twitter { color: $twitter; }
+%color__font--google { color: $google; }
+%color__font--odesk { color: $odesk; }
+%color__font--elance { color: $elance; }
+
+/****************************************************************************/
+
+// Background color extend
+
+%color__background--main { background-color: $backgound; }
+%color__background--royal-blue { background-color: $text; }
+%color__background--white { background-color: $white; }
+%color__background--icon-blue { background-color:  $blue}
+%color__background--gray { background-color:  $text-hints}
+%color__background--green { background-color:  $green}
+
+// Social
+%color__background--facebook { background-color: $facebook; }
+%color__background--twitter { background-color: $twitter; }
+%color__background--linkedin { background-color: $linkedin; }
+%color__background--google { background-color: $google; }
+%color__background--odesk { background-color: $odesk; }
+%color__background--elance { background-color: $elance; }
+
+// Grid
+%center{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+%clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+

@@ -1,0 +1,222 @@
+# Translation of the WordPress theme SocialBet Coming Soon 1.0.
+# Copyright (C) 2010 webinpixels
+# This file is distributed under the same license as the theme package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: SocialBet Coming Soon 1.0\n"
+"POT-Creation-Date: 2014-11-04 02:45+0700\n"
+"PO-Revision-Date: 2014-11-04 02:45+0700\n"
+"Last-Translator: webinpixels <email@domain.com>\n"
+"Language-Team: SocialBet <admin@socialbet.ru>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;__ngettext:1,2;_c\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: index.php:5 templates/email/footer.php:43
+#, php-format
+msgid "&copy;Copyright SocialBet %s"
+msgstr ""
+
+#: inc/class-socbet-mailer.php:70
+msgid ""
+"If you received this email by mistake, simply delete it. You won't be "
+"subscribed if you don't click the confirmation link above."
+msgstr ""
+
+#: inc/class-socbet-mailer.php:71
+msgid "Best Regards."
+msgstr ""
+
+#: inc/class-socbet-mailer.php:72
+msgid "For questions about this list, please contact:"
+msgstr ""
+
+#: inc/class-socbet-soon.php:157
+msgid "Please enter the email address"
+msgstr ""
+
+#: inc/class-socbet-soon.php:158
+msgid "Please enter a valid email address!"
+msgstr ""
+
+#: inc/class-socbet-soon.php:159
+msgid "Sorry, email is already registered, please use another email address!"
+msgstr ""
+
+#: inc/class-socbet-soon.php:160
+msgid "Sorry, cannot process your request now, please try again later."
+msgstr ""
+
+#: inc/admin/admin-functions.php:22 inc/admin/class-socbet-admin.php:130
+#: inc/admin/class-socbet-admin.php:138
+msgid "Email"
+msgstr ""
+
+#: inc/admin/admin-functions.php:23
+msgid "\"From/Sender\" email setting."
+msgstr ""
+
+#: inc/admin/admin-functions.php:32
+msgid "Email Subject"
+msgstr ""
+
+#: inc/admin/admin-functions.php:33
+msgid "Email subject for confirmation email"
+msgstr ""
+
+#: inc/admin/admin-functions.php:42
+msgid "Button Text"
+msgstr ""
+
+#: inc/admin/admin-functions.php:52 inc/admin/admin-functions.php:93
+#: inc/admin/admin-functions.php:131 inc/admin/admin-functions.php:160
+msgid "Content"
+msgstr ""
+
+#: inc/admin/admin-functions.php:53
+msgid "Enter the email content."
+msgstr ""
+
+#: inc/admin/admin-functions.php:75
+msgid "Index Page Content"
+msgstr ""
+
+#: inc/admin/admin-functions.php:83
+msgid "Content Title"
+msgstr ""
+
+#: inc/admin/admin-functions.php:84
+msgid "Enter the title for index page"
+msgstr ""
+
+#: inc/admin/admin-functions.php:103
+msgid "Text Before Subscribe Form"
+msgstr ""
+
+#: inc/admin/admin-functions.php:104
+msgid "Some teaser before the subscribe form"
+msgstr ""
+
+#: inc/admin/admin-functions.php:113
+msgid "\"After Submission\" Page Content"
+msgstr ""
+
+#: inc/admin/admin-functions.php:121 inc/admin/admin-functions.php:150
+msgid "Title"
+msgstr ""
+
+#: inc/admin/admin-functions.php:122 inc/admin/admin-functions.php:151
+msgid "Enter the title for page after email submission"
+msgstr ""
+
+#: inc/admin/admin-functions.php:132 inc/admin/admin-functions.php:161
+msgid "Enter the content"
+msgstr ""
+
+#: inc/admin/admin-functions.php:142
+msgid "\"Thank You\" Page Content - After Email Address Confirmed"
+msgstr ""
+
+#: inc/admin/class-socbet-admin.php:66 inc/admin/class-socbet-admin.php:67
+msgid "Theme Settings"
+msgstr ""
+
+#: inc/admin/class-socbet-admin.php:66
+msgid "SocialBet"
+msgstr ""
+
+#: inc/admin/class-socbet-admin.php:68 inc/admin/class-socbet-admin.php:305
+msgid "Email Settings"
+msgstr ""
+
+#: inc/admin/class-socbet-admin.php:69 inc/admin/class-socbet-admin.php:115
+msgid "Email Lists"
+msgstr ""
+
+#: inc/admin/class-socbet-admin.php:120
+msgid "Email removed from list."
+msgstr ""
+
+#: inc/admin/class-socbet-admin.php:131 inc/admin/class-socbet-admin.php:139
+msgid "Subscribed Time"
+msgstr ""
+
+#: inc/admin/class-socbet-admin.php:132 inc/admin/class-socbet-admin.php:140
+msgid "Status"
+msgstr ""
+
+#: inc/admin/class-socbet-admin.php:133 inc/admin/class-socbet-admin.php:141
+msgid "Action"
+msgstr ""
+
+#: inc/admin/class-socbet-admin.php:150
+msgid "Unverified"
+msgstr ""
+
+#: inc/admin/class-socbet-admin.php:150
+msgid "Verified"
+msgstr ""
+
+#: inc/admin/class-socbet-admin.php:151
+msgid "Remove"
+msgstr ""
+
+#: inc/admin/class-socbet-admin.php:164
+msgid "No data."
+msgstr ""
+
+#: inc/admin/class-socbet-admin.php:212 inc/admin/class-socbet-admin.php:282
+msgid "Security check failed!"
+msgstr ""
+
+#: inc/admin/class-socbet-admin.php:235
+msgid "Content Settings"
+msgstr ""
+
+#: inc/admin/class-socbet-admin.php:241 inc/admin/class-socbet-admin.php:311
+msgid "Settings saved."
+msgstr ""
+
+#: templates/coming-soon.php:15
+msgid ""
+"Social Bet – это новый проект как для начинающих, так и для уже опытных "
+"игроков."
+msgstr ""
+
+#: templates/coming-soon.php:22
+msgid ""
+"Здесь вы найдете для себя все, что нужно именно вам: лучшие коэффициенты от "
+"крупных и надежных букмекеров; сообщества, подходящие Вам по интересам; "
+"возможность следить за лучшими прогнозистами, а также зарабатывать на своих "
+"прогнозах;  доступ к полной и подробной статистике ваших ставок."
+msgstr ""
+
+#: templates/coming-soon.php:30
+msgid "Оставьте нам свой e-mail, и мы оповестим Вас об открытии!"
+msgstr ""
+
+#: templates/coming-soon.php:38
+msgid "отправить"
+msgstr ""
+
+#: templates/coming-soon.php:48 templates/thankyou.php:15
+msgid "Thank you for subscribing to the Social Bet program"
+msgstr ""
+
+#: templates/coming-soon.php:54
+msgid ""
+"We have sent you an email, Please confirm your subscription by clicking on "
+"the link contained in the e-mail."
+msgstr ""
+
+#: templates/thankyou.php:21
+msgid "Thank you for subscribing to the Social Bet program."
+msgstr ""

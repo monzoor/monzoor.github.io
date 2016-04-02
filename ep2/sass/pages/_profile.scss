@@ -1,0 +1,12 @@
+.followers {
+  display: inline-block;
+  @include border-top-radius(3px);
+  @include border-right-radius(3px);
+  @include border-bottom-radius(3px);
+  @include border-left-radius(3px);
+  text-align: center;
+  padding: 5px 10px;
+  font-size: 16px;
+  color: white;
+  margin-top: 12px;
+}

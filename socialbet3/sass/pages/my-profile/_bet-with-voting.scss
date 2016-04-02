@@ -1,0 +1,55 @@
+.bet-voting-wrapper{
+	width: 100%;
+	@include clearfix;
+	.bet-box{
+		height: 67px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		.bet-button{
+			@include common-button(157px,$Dark-gray, $Yellow,$Yellow-dark);
+			@extend .fl;
+			margin-top: 15px;
+		}
+		span{
+			@extend .fl;
+			font-size: 40px;
+			color: $White;
+			margin-top: 15px;
+			&:first-child{
+				margin-left: 330px;
+				margin-right: 18px;
+			}
+			&:last-child{
+				margin-left: 18px;
+			}
+		}
+	}
+	.poll{
+		position: relative;
+		background-color: $White;
+		@include clearfix;
+		.checkbox{
+			@include clearfix;
+			margin-top: 10px;
+			margin-left: 10px;
+		}
+		.arrow_box{
+			margin-top: 15px;
+			&:after, &:before{
+				left: 4%;
+			}
+		}
+	}
+}
+@include responsive(mobile){
+	.bet-voting-wrapper{
+		.bet-box{
+			height: 53px;
+			.bet-button{
+				float: right;
+				margin-top: 8px;
+				margin-right: 5px;
+			}
+		}
+	}
+}

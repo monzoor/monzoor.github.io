@@ -1,0 +1,54 @@
+.navbar-brand {
+    padding: 12px 15px;
+}
+.navbar {
+	min-height: 60px;
+}
+.rel {
+	position: relative;
+}
+.fxd {
+	position: fixed;
+	top: 0;
+	bottom: auto;
+}
+.marge_section {
+	margin-top: 60px;
+}
+.navbar-inverse {
+	.navbar-nav {
+		&.nav{
+			width: 100%;
+		}
+		>li {
+			margin-top: 5px;
+			&.nav-logo {
+				margin-top: -1px;
+			}
+			&.selected {
+				padding-bottom: 5px;
+				border-bottom: 2px solid $base-green;
+			}
+			
+			@include responsive(mobile) {
+				&.pull-right {
+					float: none !important;
+				}
+			}
+			@include responsive(tab-portrait) {
+				&.pull-right {
+					float: none !important;
+				}
+			}
+
+			>a {
+				color: $white;
+				text-transform: uppercase;
+				padding-bottom: 0;
+			}
+		}
+	}
+}
+.full-logo {
+	width: 122px;
+}

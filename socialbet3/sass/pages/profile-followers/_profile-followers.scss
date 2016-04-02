@@ -1,0 +1,294 @@
+.profile-followers-wrapper{
+	width: 100%;
+	height: auto;
+	@include clearfix;
+	.view-style{
+		width: auto;
+		height: auto;
+		margin-top: 15px;
+		a{
+			margin-right: 20px;
+			float: left;
+			@include font(pt-sans-regular);
+			font-size: 18px;
+			span{
+				margin-right: 10px;
+			}
+			&:last-child{
+				margin-right: 0px;
+			}
+		}
+	}
+	.search-box2{
+		width: 380px;
+		display: block;
+	}
+	.followers-wrapper{//div
+		width: 100%;
+		height: auto;
+		@include clearfix;
+		margin-top: 20px;
+	}
+	.followers{//ul
+		&.grid{//ul exnt
+			li{
+				width: 31%;
+				height: auto;
+				margin-right: 2%;
+				float: left;
+				@include clearfix;
+				position: relative;
+				&:last-child{
+					margin-right: 0;
+				}
+				.follower-img{
+					width: 40%;
+					display: block;
+					margin: 0 auto;
+					padding: 3%;
+				}
+				span{
+					padding: 3%;
+				}
+				.polygon-wrapper2{
+					width: 94%;
+					padding: 3%;
+					margin-bottom: 40px;
+				}
+				.fill-balance{
+					border-top: 2px solid transparent;
+				}
+			}
+		}
+		&.list{
+			li{
+				width: 100%;
+				margin-bottom: 10px;
+				display: inline-block;
+				p.al-cntr{
+					width: 20%;
+					float: left;
+					margin-top: 6%;
+				}
+				.polygon-wrapper2 {
+					width: 30%;
+					height: auto;
+					margin: 10px auto 20px auto;
+					float: left;
+				}
+				.follower-img{
+					width: 13%;
+					margin: 12px 2%;
+					float: left;
+				}
+				.fill-balance{
+					float: left;
+					width: 27%;
+					margin-left: 3%;
+					margin-top: 5%;
+				}
+			}
+		}
+	}
+}
+@include responsive(mobile){
+	.profile-followers-wrapper{
+		.search-box2{
+			width: 100%;
+		}
+		.followers{//ul
+			&.list{
+				li{
+					position: relative;
+					p.name{
+						position: absolute;
+						top: 0;
+						width: auto;
+						text-align: left;
+						left: 13px;
+					}
+					.sign-up {
+						border: 1px solid #37C0C6;
+						position: absolute;
+						text-align: center;
+						top: 0;
+						bottom: 0;
+						right: 10px;
+						width: 60px;
+						height: 40px;
+						font-size: 38px;
+						margin: auto 0;
+					}
+					.polygon-wrapper2 {
+						margin: 50px auto 20px auto;
+						width: 49%;
+					}
+
+					.follower-img{
+						width: 20%;
+						margin: 41px 2%;
+					}
+					.circle-text {
+						.pos-abs{
+							font-size: 9px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@include responsive(big-mobile){
+	.profile-followers-wrapper{
+		.search-box2{
+			width: 100%
+		}
+		.followers{//ul
+			&.list{
+				li{
+					position: relative;
+					p.name{
+						position: absolute;
+						top: 0;
+						width: auto;
+						text-align: left;
+						left: 13px;
+					}
+					.sign-up {
+						border: 1px solid #37C0C6;
+						position: absolute;
+						text-align: center;
+						top: 0;
+						bottom: 0;
+						right: 10px;
+						width: 60px;
+						height: 40px;
+						font-size: 38px;
+						margin: auto 0;
+					}
+					.polygon-wrapper2 {
+						margin: 50px auto 20px auto;
+						width: 49%;
+					}
+
+					.follower-img{
+						width: 20%;
+						margin: 41px 2%;
+					}
+					.circle-text {
+						.pos-abs{
+							font-size: 9px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@include responsive(tab-portrait){
+	.profile-followers-wrapper{
+		.view-style{
+			a{
+				span{
+				}
+				&:last-child{
+				}
+			}
+		}
+		.search-box2{
+			display: block !important;
+			width: 188px;
+			input[type="text"]{
+				width: 75%;
+			}
+		}
+		.followers{//ul
+			&.grid{//ul exnt
+				li{
+					width: 47%;
+					margin-bottom: 2%;
+					.circle-text {
+						.pos-abs{
+							font-size: 11px;
+						}
+					}
+					.fill-balance{
+						width: 100%;
+						&.white-bg{
+							width: 99%;
+						}
+					}
+				}
+			}
+			&.list{
+				li{
+					
+					p.al-cntr{
+						width: 18%;
+						font-size: 12px;
+					}
+					.polygon-wrapper2 {
+						width: 36%;
+					}
+					.circle-text {
+						.pos-abs{
+							font-size: 10px;
+						}
+					}
+					.fill-balance{
+						float: right;
+						width: 23%;
+						margin-left: 0%;
+						margin-top: 5%;
+						margin-right: 2%;
+					}
+				}
+			}
+		}
+	}
+}
+@include responsive(tab-landscape){
+	.profile-followers-wrapper{
+		.search-box2{
+			width: 240px;
+			input[type="text"]{
+				width: 75%;
+			}
+		}
+		.followers{//ul
+			&.grid{//ul exnt
+				li{
+					width: 47%;
+					margin-bottom: 2%;
+					.circle-text {
+						.pos-abs{
+							font-size: 12px;
+						}
+					}
+					.fill-balance{
+						width: 100%;
+						&.white-bg{
+							width: 99%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@include responsive(small-desktop){
+	.profile-followers-wrapper{
+		.followers{//ul
+			&.grid{//ul exnt
+				li{
+					.circle-text {
+						.pos-abs{
+							font-size: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+

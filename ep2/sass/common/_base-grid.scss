@@ -1,0 +1,43 @@
+ // Grid
+ // Grid with 940px center aligned
+.content__grid--940-center {
+	@include center(940px);
+}
+.content__grid--1100-center {
+	@include center(1100px);
+}
+.content__grid--full {
+	@include center(100%);
+}
+
+// Full sized info boxes example in student/activity
+.content__info__wrapper--full {
+	width: 90%;
+	padding: 5% 5%;
+	@extend %clearfix;
+}
+.content__info__wrapper--full--no-padding {
+	width: 100%;
+	@extend %clearfix;
+}
+// Half sized info boxes example in student/activity
+.content__info__wrapper--half {
+	@include column(1/2, $cycle: 2, $gutter: 0);
+}
+.content__info__wrapper--half-with-gutter {
+	@include column(1/2, $cycle: 2, $gutter: 5);
+}
+// Three sized info boxes example in student/activity
+.content__info__wrapper--onethird {
+	@include column(1/3, $cycle: 3, $gutter: 0);
+}
+.content__info__wrapper--onethird-with-gutter {
+	@include column(1/3, $cycle: 3, $gutter: 5);
+}
+.content__info__wrapper--twothird {
+	@include column(2/3, $cycle: 3, $gutter: 0);
+}
+.content__info__wrapper--twothird-with-gutter  {
+	@include column(2/3, $cycle: 3, $gutter: 5);
+}
+

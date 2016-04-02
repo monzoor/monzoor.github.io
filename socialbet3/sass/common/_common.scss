@@ -1,0 +1,153 @@
+img{
+	width: 100%;
+}
+*:focus {
+    outline: 0;
+}
+
+.md-trigger{
+	cursor: pointer;
+}
+
+.circle{
+	@include border-top-radius(100%);
+	@include border-bottom-radius(100%);
+	@include border-left-radius(100%);
+	@include border-right-radius(100%);
+}
+
+//common button
+.button-blue{
+	@include common-button(157px,$White,$Brand-blue,$Dark-deep-brand-blue);
+	margin-top: 16px;
+	display: inline-block;
+}
+.fill-balance{
+	@include common-button(157px,$White,$Brand-blue,$Dark-deep-brand-blue);
+	margin-top: 16px;
+}
+.fill-balance-yellow{
+	@include common-button(auto,$Dark-gray,$Yellow,$Yellow-dark,auto);
+	margin-top: 16px;
+	padding-top: 0;
+	padding: 10px 20px;
+}
+.fill-balance-black{
+	@include common-button(auto,$White,$Dark-gray,$Black,auto);
+	margin-top: 16px;
+	padding-top: 0;
+	padding: 10px 20px;
+}
+
+.question{
+	margin-top: 10px;
+	font-weight: bold;
+	display: inline-block;
+}
+.shadow{
+	-webkit-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.13);
+	-moz-box-shadow:    -1px 0px 5px 0px rgba(0, 0, 0, 0.13);
+	box-shadow:         -1px 0px 5px 0px rgba(0, 0, 0, 0.13);
+}
+
+
+
+//border
+.border{
+	height: 0;
+	width: 0;
+	@include border(1px,$Light-gray);
+	@include clearfix;
+	width: 100%;
+	margin: 10px 0;
+}
+
+
+//backgound color
+.no-bg{
+	background-color: transparent !important;
+}
+
+.brand-blue-bg{
+	background-color: $Brand-blue;
+}
+.brand-red-bg{
+	background-color: $Brand-red;
+}
+.brand-light-blue-bg{
+	background-color: $Light-brand-blue;
+}
+.very-light-brand-blue-bg{
+	background-color: #d8f6f4;
+}
+
+.yellow-bg{
+	background-color: $Yellow !important;
+}
+.light-yellow-bg{
+	background-color: $Light-yellow;
+}
+.very-light-yellow{
+	background-color: #fffcef !important;
+}
+.dark-gray-bg{
+	background-color: $Dark-gray;
+}
+.medium-gray-bg{
+	background-color: $Medium-gray !important;
+}
+.medium-gray-bg3{
+	background-color: $Medium-gray3!important;
+}
+.light-gray-bg{
+	background-color: $Light-gray;
+}
+.verylight-gray-bg{
+	background-color: $Very-light-gray !important;
+}
+.verylight-gray-bg2{
+	background-color: $Very-light-gray2 !important;
+}
+.white-bg{
+	background-color: $White;
+}
+
+
+
+
+// Need to delet
+// @include responsive(mobile){
+// 	body{
+// 		background-color: red;
+// 	}
+// }
+// @include responsive(big-mobile){
+// 	body{
+// 		background-color: magenta;
+// 	}
+// }
+// @include responsive(tab-portrait){
+// 	body{
+// 		background-color: blue;
+// 	}
+// }
+// @include responsive(tab-landscape){
+// 	body{
+// 		background-color: #000000;
+// 	}
+// }
+// @include responsive(small-desktop){
+// 	body{
+// 		background-color: gray;
+// 	}
+// }
+// @include responsive(desktop){
+// 	body{
+// 		background-color: green;
+// 	}
+// }
+// @include responsive(big-desktop){
+// 	body{
+// 		background-color: yellow;
+// 	}
+// }

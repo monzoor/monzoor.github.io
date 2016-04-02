@@ -1,0 +1,36 @@
+.home__wrapper{
+	background: url(../images/monzoor.png) no-repeat right bottom ;
+	position: relative;
+	z-index: 1;
+	.home--article{
+		@include col(1/2);
+		@extend %center;
+		height: 500px;
+		text-align: center;
+		margin-left: 10%;
+		h2{
+			@include font($lato,300, 48px, 50px);
+		}
+		h1{
+			margin-top: 20px;
+			@include font($grand-hotel,700, 40px, 50px);
+		}
+		p{
+			margin-top: 20px;
+			@include font($lato,400);
+		}
+	}
+}
+.home--background{
+	content: "";
+	background: url(../images/bg-3.png) no-repeat right bottom ;
+	background-size: cover;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	opacity: .2;
+	position: absolute;
+	z-index: 0;
+}
+

@@ -1,0 +1,97 @@
+.navbar-brand {
+    padding: 12px 15px;
+}
+.navbar {
+	min-height: 60px;
+}
+.rel {
+	position: relative;
+}
+.fxd {
+	position: fixed;
+	top: 0;
+	bottom: auto;
+}
+.marge_section {
+	margin-top: 60px;
+}
+.navbar-inverse {
+    background-color: #282828;
+    border-color: #282828;
+}
+.navbar-inverse {
+	.navbar-nav {
+		&.nav{
+			width: 100%;
+		}
+		>li {
+			margin-top: 5px;
+			&.nav-logo {
+				margin-top: -1px;
+			}
+			
+			&:last-child {
+				margin-bottom: 10px;
+			}
+			
+			@include responsive(mobile) {
+				&.pull-right {
+					float: none !important;
+				}
+			}
+			@include responsive(tab-portrait) {
+				&.pull-right {
+					float: none !important;
+				}
+			}
+
+			>a {
+				color: $white;
+				text-transform: uppercase;
+				padding-bottom: 0;
+				&:focus {
+					outline: none;
+				}
+				&.selected {
+					padding-bottom: 5px;
+					border-bottom: 2px solid $base-green;
+				}
+			}
+		}
+	}
+}
+.full-logo {
+	width: 122px;
+}
+
+@media (max-width: 927px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+    	&.collapse {
+	        display: none!important;
+	    	&.in {
+		        display: block!important;
+		    }
+	    }
+    }
+    .navbar-nav {
+        float: none!important;
+        >li {
+	        float: none !important;
+	    }
+    }
+    .small-logo {
+    	display: block !important;
+    }
+    .full-logo-wrapper {
+    	display: none !important;
+    }
+}
+ .navbar>.container-fluid .navbar-brand {
+ 	margin-left: 0;
+ }

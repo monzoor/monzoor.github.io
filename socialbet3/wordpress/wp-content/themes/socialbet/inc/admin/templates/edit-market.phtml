@@ -1,0 +1,126 @@
+<?php global $wpdb, $sbdb, $SocBet_Theme; ?>
+
+<div class="wrap">
+
+	<h2><?php print __('Edit Market', 'socialbet'); ?>
+		<a href="<?php echo admin_url('edit.php?post_type=event&page=show-markets&event='.$event->ID);?>" class="add-new-h2"><?php print isset( $_GET['message'] ) ? __('&larr; Back', 'socialbet') : __('Cancel', 'socialbet'); ?></a>
+	</h2>
+
+	<br />
+
+	<?php $SocBet_Theme->print_messages( $errors ); ?>
+
+	<?php 
+	if ( isset( $_GET['message'] ) ) {
+
+		if ( $_GET['message'] == '1' ) {
+			echo '<div class="socbet-alert alert-success">' . __('Success update the data!', 'socialbet') . '</div>';
+		}
+
+	}
+	?>
+
+	<form id="socbet-nwe-market" method="post" action="<?php echo admin_url('edit.php?post_type=event&page=edit-market&event='.$event->ID).'&market_id='.$market->id;?>">
+
+		<?php wp_nonce_field( 'socbet-edit-market', '_wpnonce', true, true ); #security ?>
+		<input type="hidden" name="event_id" value="<?php echo esc_attr( $event->ID ); ?>" />
+		
+		<p>
+			<label for="market-name"><?php _e('Market Name', 'socialbet'); ?></label>
+			<input type="text" name="market_name" id="market-name" class="socbet-form" value="<?php echo esc_attr( $market->name ); ?>" placeholder="<?php _e('Enter the Market Name here', 'socialbet'); ?>" autocomplete="off" />
+		</p>
+
+		<h4><?php print __('Market Entries and Odds', 'socialbet'); ?></h4>
+
+		<div id="market-entries-wrap">
+
+			<div id="market-entries-form">
+				<div class="col-wrap">
+					<div class="col-md-3">
+						<input type="text" name="new_market_entry_name" id="new_market_entry_name" value="" placeholder="<?php print __('Market Entry Name', 'wip'); ?>" />
+					</div>
+					<div class="col-md-3">
+						<input type="text" name="new_market_entry_odds" id="new_market_entry_odds" value="" placeholder="<?php print __('Odds', 'wip'); ?>" />
+					</div>
+					<div class="col-md-3">
+						<input type="text" name="new_market_entry_decimal_odds" id="new_market_entry_decimal_odds" value="" placeholder="<?php print __('Decimal Odds', 'wip'); ?>" />
+					</div>
+					<div class="col-md-3">
+						<input type="text" name="new_market_entry_price" id="new_market_entry_price" value="" placeholder="<?php print __('Price', 'wip'); ?>" />
+					</div>
+				</div>
+				<p class="text-right">
+					<a id="add-new-market-entry" class="button button-primary" href="#"><?php print __('Add New', 'socialbet'); ?></a>
+				</p>
+			</div>
+
+			<table class="wp-list-table widefat fixed">
+				<thead>
+					<tr>
+						<th scope="col" class="manage-column"><?php print __('Market Entry', 'socialbet'); ?></th>
+						<th scope="col" class="manage-column"><?php print __('Odds', 'socialbet'); ?></th>
+						<th scope="col" class="manage-column"><?php print __('Decimal Odds', 'socialbet'); ?></th>
+						<th scope="col" class="manage-column"><?php print __('Price', 'socialbet'); ?></th>
+						<th scope="col" class="manage-column"><?php print __('Action', 'socialbet'); ?></th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<th scope="col" class="manage-column"><?php print __('Market Entry', 'socialbet'); ?></th>
+						<th scope="col" class="manage-column"><?php print __('Odds', 'socialbet'); ?></th>
+						<th scope="col" class="manage-column"><?php print __('Decimal Odds', 'socialbet'); ?></th>
+						<th scope="col" class="manage-column"><?php print __('Price', 'socialbet'); ?></th>
+						<th scope="col" class="manage-column"><?php print __('Action', 'socialbet'); ?></th>
+					</tr>
+				</tfoot>
+
+				<tbody id="the-list-markets">
+					<?php
+					if ( !empty($odds) ) {
+
+						foreach( $odds as $odd ) {
+							?>
+							<tr>
+								<td class="column-entry-name"><?php echo stripslashes($odd->name); ?></td>
+								<td class="column-entry-odds"><?php echo $odd->odds; ?></td>
+								<td class="column-entry-decimal-odds"><?php echo $odd->decimal_odds; ?></td>
+								<td class="column-entry-price"><?php echo $odd->price; ?></td>
+								<td class="column-entry-action">
+									<a href="#" class="entry-inline-edit"><?php print __('Edit', 'socialbet'); ?></a>
+									| <a href="#" class="entry-inline-remove"><?php print __('Delete', 'socialbet'); ?></a>
+								</td>
+							</tr>
+							<tr class="edit_event_entry">
+								<td colspan="5">
+									<div class="col-wrap">
+										<div class="col-md-3"><input type="text" name="mentry_name[]" value="<?php echo esc_attr($odd->name); ?>" /></div>
+										<div class="col-md-3"><input type="text" name="mentry_odds[]" value="<?php echo esc_attr($odd->odds); ?>" /></div>
+										<div class="col-md-3"><input type="text" name="mentry_decimal_odds[]" value="<?php echo esc_attr($odd->decimal_odds); ?>" /></div>
+										<div class="col-md-3"><input type="number" name="mentry_price[]" value="<?php echo esc_attr($odd->price); ?>" /></div>
+									</div>
+									<p class="text-right"><a href="#" class="button button-primary update-entry-data"><?php print __('Save Changes', 'socialbet'); ?></a></p>
+								</td>
+							</tr>
+
+							<?php
+						}
+
+					}
+
+					?>
+					<tr id="socbet-noentry"<?php if ( !empty($odds) ) echo ' style="display: none;"'; ?>>
+						<td colspan="5">
+							<div class="socbet-alert alert-warning text-center"><?php print __('No data!', 'socialbet'); ?></div>
+						</td>
+					</tr>
+
+				</tbody>
+			</table>
+		</div>
+
+		<p class="submit">
+			<input type="submit" class="button button-primary" name="submit" value="<?php _e('Save Changes', 'socialbet'); ?>" />
+		</p>
+	</form>
+
+</div>

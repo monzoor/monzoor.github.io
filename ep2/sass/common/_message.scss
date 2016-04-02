@@ -1,0 +1,37 @@
+.alert__message {
+  display: table;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 3px;
+  margin: 0 0 12px;
+  .alert__message--icon {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 40px;
+    top: 0;
+  }
+  .alert__message--message {
+    vertical-align: middle;
+    padding: 20px 20px;
+    line-height: 18px;
+    height: 16px;
+    display: table-cell;
+    @extend %color__font--white;
+    li{
+    	list-style: disc;
+    	margin-left: 15px;
+    	margin-bottom: 10px;
+    }
+
+  }
+  &.alert {
+    	background-color: $error;
+  }
+  &.notice {
+    	background-color: $info;
+  }
+  &.done {
+       background-color: $done;
+  }
+}

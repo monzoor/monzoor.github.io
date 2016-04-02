@@ -1,0 +1,260 @@
+
+body{
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	@include font($lato);
+	@extend %color__background--main;
+}
+* a{
+	text-decoration: none;
+	@extend %color__font--link;
+	&:hover{
+		color: $button-selected;
+	}
+}
+img {
+	display: block;
+}
+
+:focus {outline:none;}
+button::-moz-focus-inner {
+  border: 0;
+}
+input {
+	outline-color: transparent;
+	box-shadow: 0px 0px 0px #888888;
+}
+
+// Clearfix
+.clear {
+	clear: both;
+}
+.clear--none {
+	clear: none !important;
+}
+
+// Font decoration 
+.underline { text-decoration: underline}
+.uppercase { text-transform: uppercase }
+
+// Float element
+.float--right{ float: right; }
+.float--left { float: left; }
+.float--none { float: none; }
+
+// Float element important
+.float__imp--right{ float: right !important; }
+.float__imp--left { float: left !important; }
+.float__imp--none { float: none !important; }
+
+// Font align
+.font__align--center { text-align: center}
+.font__align--left { text-align: left}
+.font__align--right { text-align: right}
+
+// font weight
+.font__weight--100 { font-weight: 100 }
+.font__weight--300 { font-weight: 300 }
+.font__weight--400 { font-weight: 400 }
+.font__weight--700 { font-weight: 700 }
+.font__weight--900 { font-weight: 900 }
+
+// Margin 
+.margin__left--3{ margin-left: 3px}
+.margin__top--4 { margin-top: 4px}
+.margin__auto--top0 { margin: 0 auto;}
+.margin__top--30 {margin-top:30px}
+
+@mixin margin__generator($class-slug,$loop){
+	@for $i from 0 through $loop {
+		.margin__#{$class-slug}--#{$i*6} { // .margin__top--6*6{ margin-top: 6*6px}
+			margin-#{$class-slug}: $i*6#{px};
+		}
+	}
+}
+@include margin__generator(top,10);
+@include margin__generator(bottom,10);
+@include margin__generator(left,10);
+@include margin__generator(right,10);
+// Padding
+.padding__right--30{
+	padding-right: 30px;
+}
+.padding__top--60{
+	padding-top: 60px;
+}
+.padding__bottom--60{
+	padding-bottom: 60px;
+}
+.padding__bottom--30{
+	padding-bottom: 30px;
+}
+.padding__bottom--12{
+	padding-bottom: 12px;
+}
+.pdding__all--zero {
+	padding: 0;
+}
+.padding__point25 {
+	padding: 1% 3%;
+	width: 94%;
+}
+// Courser
+.courser--no{
+	cursor: text;
+}
+
+// font size
+.font__size--12px {
+	font-size: 12px;
+}
+.font__size--14px {
+	font-size: 14px;
+}
+.font__size--16px {
+	font-size: 16px;
+}
+.font__size--18px {
+	font-size: 18px;
+}
+.font__size--24px {
+	font-size: 24px;
+}
+.font__size--30px {
+	font-size: 30px;
+}
+.font__size--37px {
+	font-size: 37px;
+}
+.font__size--100px {
+	font-size: 100px;
+}
+// line height
+.line__height--105em{
+	line-height: 1.5em;
+}
+.line__height--1em{
+	line-height: 1em;
+}
+
+// font color 
+.font__color--blue{
+	@extend %color__font--blue;
+}
+.font__color--icon-blue{
+	@extend %color__font--icon-blue;
+}
+.font__color--white--opacity--point35{
+	color: rgba(255,255,255, .35)
+}
+.font__color--secondary{
+	@extend %color__font--secondary;
+}
+.font__color--hints{
+	@extend %color__font--hints;
+}
+.font__color--divider{
+	@extend %color__font--divider;
+}
+.font__color--dark-bg--main{
+	@extend %color__font__dark-bg--main;
+}
+.font__color--dark-bg--secondary {
+	@extend %color__font--dark-bg--secondary ;
+}
+.font__color--yellow {
+	@extend %color__font--yellow;
+}
+.font__color--green {
+	@extend %color__font--green;
+}
+
+//
+.background__color--royal-blue {
+	@extend %color__background--royal-blue ;
+}
+.background__color--white {
+	@extend %color__background--white ;
+}
+.background__color--icon-blue {
+	@extend %color__background--icon-blue;
+}
+.background__color--gray {
+	@extend %color__background--gray;
+}
+.background__color--green {
+	@extend %color__background--green;
+}
+
+// Align
+.text__align--left {
+	text-align: left;
+}
+.text__align--right {
+	text-align: right;
+}
+.text__align--center {
+	text-align: center;
+}
+.text__align--justify {
+	text-align: justify;
+}
+
+
+// block element
+.display--block {
+	display: block;
+}
+.display--inblock {
+	display: inline-block;
+}
+.display--table {
+	display: table;
+}
+.display--table-cell {
+	display: table-cell;
+}
+// Vertical Align
+.align__vertical--middle{
+	vertical-align: middle;
+}
+// Position
+.position--relative {
+	position: relative;
+}
+// visibility
+.visibility--hidden {
+	visibility: hidden;
+}
+// devider
+.devider--dashed--bottom{
+	@extend .margin__bottom--30;
+	height: 0;
+	width: 100%;
+	border-bottom: 2px dashed $button-border
+}
+.devider--line--bottom{
+	height: 0;
+	width: 100%;
+	border-bottom: 1px solid $separator-dashed;
+}
+.devider--right {
+	@include  box-shadow(1px, 0px, 0px, rgba(#000,.2));
+}
+.devider--left--inset {
+	@include  box-shadow(1px, 0px, 0px, rgba(#000,.2), inset);
+}
+.border--bottom {
+	border-bottom: 1px solid rgba(#000,.2);
+}
+// special width
+.width__special--full {
+	width: 100%;
+}
+// Demo
+.border-red {
+	border: 1px solid red;
+}
+
+
+

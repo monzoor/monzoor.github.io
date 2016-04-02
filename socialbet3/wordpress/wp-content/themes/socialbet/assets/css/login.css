@@ -1,0 +1,35 @@
+body.socbet-login .main-container {
+	float: right;
+	text-align: left;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.login #wp-social-login-connect-options img{
+	width: auto;
+}
+
+.socbet-login .search-box input[name="s"] {
+  display: inline-block;
+  width: 85%;
+  height: 35px;
+  background-color: #ffffff;
+  border: 0 solid #ffffff;
+  padding: 0;
+  margin-right: 0;
+  font-family: "Arial", sans-serif;
+  font-size: inherit;
+  font-weight: 400;
+  font-style: normal;
+  color: #3b3b3b;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-shadow: none;
+}
+.socbet-login .search-box button{
+	display: inline-block;
+}
+.login form {
+  background-color: transparent;
+}

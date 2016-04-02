@@ -1,0 +1,96 @@
+// Button Reset
+
+// Button Reset
+button {
+	width: auto;
+	border: 0 none;
+	margin: 0;
+	padding: 0;
+	background: transparent;
+	overflow: visible;
+	vertical-align: middle;
+}
+
+button, .button {
+	font-size: 15px;
+	line-height: 24px;
+	padding: 6px 18px;
+	font-weight: 700;
+	font-style: normal;
+	cursor: pointer;
+	text-align: center;
+	display: inline-block;
+	margin: 0;
+	@extend %color__font--blue;
+	@include border-top-radius(3px);
+	@include border-right-radius(3px);
+	@include border-bottom-radius(3px);
+	@include border-left-radius(3px);	
+	@include transition-property(background);
+	@include transition-duration(.3s);
+	background-color: $button-bg;
+	border: 1px solid $button-border;
+
+	&:hover{
+		background-color: $button-selected;
+		@extend %color__font--blue;
+	}
+
+	// Color
+	&.current {
+		background-color: $button-selected;
+	}
+	&.facebook{
+		@extend %color__background--facebook;
+		@extend %color__font--white;
+		i { margin-top: -2px}
+	}
+	&.twitter{
+		@extend %color__background--twitter;
+		@extend %color__font--white;
+		i{ 
+			margin-left: -13px;
+  			margin-top: -2px;
+  		}
+	}
+	&.google{
+		@extend %color__background--google;
+		@extend %color__font--white;
+		i{ margin-left: -8px}
+	}
+	&.linkedin{
+		@extend %color__background--linkedin;
+		@extend %color__font--white;
+		i{ margin-left: -8px; margin-top: -6px;}
+	}
+
+	// Width
+
+	&.width--full { width: 100%;}
+	&.width--full--no-padding { width: 100%; padding: 6px 0}
+	&.width--half { width: 50%;}
+
+	// Extra padding
+
+	&.padding--66 { padding: 9px 66px; }
+	&.icon--right { padding-right: 8px;}
+	&.icon--left { padding-left: 8px;}
+	i{
+		height: 100%;
+		display: inline-block;
+		font-size: 17px;
+		vertical-align: middle;
+		margin-right: 10px;
+		&.margin__right--0{ margin-right: 0px}
+	}
+}
+.button--close {
+	position: absolute;
+	right: 12px;
+	top: 18px;	
+	a {
+		color: $white;
+		font-size: 18px;
+	}
+}
+

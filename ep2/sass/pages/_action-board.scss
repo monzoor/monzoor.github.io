@@ -1,0 +1,56 @@
+.stances {
+  @extend .margin__bottom--30;
+}
+.card{
+  @extend .content__info__wrapper--full;
+  @extend .background__color--white;
+  @extend .margin__bottom--30;
+  @extend %color__font--blue;
+  @extend .font__align--center;
+  border: 1px solid $button-border;
+}
+.social {
+  float: left;
+  i {
+    text-align: left;
+    margin-right: 5px;
+    font-size: 18px;
+  }
+}
+
+.right__arrow {
+  overflow: hidden;
+  width: 18%;
+  position: absolute;
+  left: 21px;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  height: 160px;
+  margin: auto 0;
+  i {
+      display: block;
+      margin-left: -89px;
+      font-size: 170px;
+  }
+}
+.right__card--blue {
+  min-height: 300px;
+}
+.text__box{
+  width: 74.66667%;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 20px;
+  margin: auto 0;
+  min-height: 180px;
+  height: 180px;
+  &.text__box--only__text{
+    width: 82.66667%;
+    padding-right: 5%;
+  }
+}
+.name__box {
+  min-height: 60px;
+}

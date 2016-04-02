@@ -1,0 +1,298 @@
+.profile-groups-wrapper{
+	width: 100%;
+	height: auto;
+	@include clearfix;
+	@extend .profile-competition-wrapper;
+	.search-box2{
+		margin-top: 16px;
+		input[type="text"]{
+			height: 40px;	
+		}
+		.search-button{
+			height: 40px;
+		}
+	}
+	.groups-wrapper{
+		width: 100%;
+		height: auto;
+		@include clearfix;
+		ul{
+			margin-bottom: 20px;
+			@include clearfix;
+		}
+		li{
+			background-color: $White;
+			width: 18%;
+			margin-right: 2%;
+			margin-bottom: 2%;
+			position: relative;
+			min-height: 216px;
+			&:last-child{
+				margin-right: 0;
+			}
+			.grp-img1{
+				width: 100%;
+				height: 60px;
+				@include clearfix;
+				background-color: $Brand-blue;
+				overflow: hidden;
+			}
+			.grp-img2{
+				width: 60px;
+				height: 60px;
+				margin: 0 auto;
+				display: block;
+				overflow: hidden;
+				margin-top: -30px;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center;
+				position: absolute;
+				left: 0;
+				right: 0;
+				@extend .circle;
+			}
+			h2{
+				text-align: center;
+				margin: 40px 0 10px;
+				padding: 0 6%;
+			}
+			p{
+				text-align: center;
+			}
+			.fill-balance{
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				&.selected{
+					background-color: $White;
+					border-top: 1px solid $Brand-blue;
+					border-left: 1px solid $Brand-blue;
+					border-right: 1px solid $Brand-blue;
+					color: $Brand-blue;
+				}
+			}
+			.user-add{
+				border: 1px solid $Brand-blue;
+				position: absolute;
+				text-align: center;
+				top: 0;
+				bottom: 0;
+				right: 10px;
+				width: 60px;
+				height: 40px;
+				font-size: 38px;
+				margin: auto 0;		
+			}
+		}
+	}
+}
+// modal design
+.create-groups{
+	width: 450px;
+	background-color: $Medium-gray;
+	.form-wrapper{
+		width: 92%;
+		display: block;
+		height: auto;
+		margin: 20px auto;
+		@include clearfix;
+		label{
+			float: left;
+			text-align: right;
+			width: 30%;
+			margin-right: 2%;
+			height: 35px;
+		}
+		input, select, textarea{
+			float: right;
+			width: 65%;
+		}
+		input {
+			height: 18px;
+			padding: 1%;
+		}
+		select{
+			width: 68%;
+			height: 31px;
+		}
+		textarea{
+			width: 64%;
+		}
+		input[type="submit"]{
+			width: 40%;
+			height: 43px;
+			border: 0;
+			border-bottom: 4px solid $Dark-brand-blue;
+		}
+	}
+}
+
+
+@include responsive(tab-portrait){
+	.profile-groups-wrapper{
+		.groups-wrapper{
+			li{
+				width: 31%;
+			}
+		}
+		.search-box2{
+			display: block;
+			width: 100%;
+			input[type="text"]{
+				width: 80%;
+			}
+		}
+	}
+}@include responsive(tab-landscape){
+	.profile-groups-wrapper{
+		.groups-wrapper{
+			li{
+				width: 23%;
+			}
+		}
+	}
+	.search-box2{
+		display: block;
+		width: 100%;
+		input[type="text"]{
+			width: 82%;
+		}
+	}
+}
+@include responsive(big-mobile){
+	.profile-groups-wrapper{
+		.groups-wrapper{
+			ul{margin: 0;}
+			li{
+				width: 100%;
+				margin-bottom: 10px;
+				min-height: 93px;
+				.grp-img1{display: none;}
+				.grp-img2{
+					margin: auto 0;
+					top: 0;
+					bottom: 0;
+					left: 10px;
+				}
+				h2{
+					text-align: left;
+					margin: 20px 0 10px 85px;
+					font-size: 25px;
+					width: 60%;
+					padding: 0;
+				}
+				p{
+					text-align: left;
+					margin: 10px 0 10px 85px;
+					font-size: 14px;
+				}
+				.fill-balance{
+					display: none;
+				}
+			}
+		}
+		.search-box2{
+			display: block;
+			width: 100%;
+			input[type="text"]{
+				width: 80%;
+			}
+		}
+	}
+}
+@include responsive(mobile){
+	.profile-groups-wrapper{
+		.groups-wrapper{
+			ul{margin: 0;}
+			li{
+				width: 100%;
+				margin-bottom: 10px;
+				min-height: 93px;
+				.grp-img1{display: none;}
+				.grp-img2{
+					margin: auto 0;
+					top: 0;
+					bottom: 0;
+					left: 10px;
+				}
+				h2{
+					text-align: left;
+					margin: 20px 0 10px 85px;
+					font-size: 25px;
+					width: 60%;
+					padding: 0;
+				}
+				p{
+					text-align: left;
+					margin: 10px 0 10px 85px;
+					font-size: 14px;
+				}
+				.fill-balance{
+					display: none;
+				}
+			}
+		}
+		.search-box2{
+			display: block;
+			width: 100%;
+			input[type="text"]{
+				width: 80%;
+			}
+		}
+	}
+	.create-groups{
+		width: 50%;
+		.form-wrapper{
+			@include clearfix;
+			label{
+				width: 100%;
+				text-align: left;
+				height: auto;
+			}
+			input, select, textarea{
+				float: right;
+				width: 97%;
+				text-align: left;
+				margin-bottom: 20px;
+			}
+			input {
+				height: 18px;
+				padding: 1%;
+			}
+			select{
+				width: 100%;
+				height: 31px;
+			}
+			textarea{
+				width: 97%;
+			}
+			input[type="submit"]{
+				width: 40%;
+				height: 43px;
+				border: 0;
+				border-bottom: 4px solid $Dark-brand-blue;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

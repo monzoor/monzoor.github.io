@@ -1,0 +1,135 @@
+.compitition-notification-wrapper{
+	width: 100%;
+	height: auto;
+	@include clearfix;
+	background-color: $White;
+	margin-bottom: 5px;
+	.count-down{
+		width: 100%;
+		height: 260px;
+		position: relative;
+		background-size: cover;
+		background-repeat: no-repeat;
+		margin-top: 15px;
+		.yellow-box{
+			position: absolute;
+			width: auto;
+			height: 70px;
+			top: 15px;
+			left: 15px;
+			.p1{
+				@include text-style(pt-sans-bold, $Yellow, 12px);
+				margin-bottom: 5px;
+			}
+			.p2{
+				@include text-style(league-gothic-regular, $Yellow, 42px)
+			}
+		}
+	}
+	.video{
+		width: 100%;
+		@include clearfix;
+		img{
+			// @include clearfix;
+		}
+		.video-gallery{
+			width: 100%;
+			margin-bottom: 20px;
+			@include clearfix;
+			li{
+				width: 30%;
+				margin-right: 20px;
+				list-style: none;
+				&:last-child{
+					margin-right: 0;
+				}
+				p{
+					bottom: 3px;
+					position: absolute;
+					width: 94%;
+					background-color: rgba(0,0,0,.5);
+					height: 27px;
+					padding:  5px 3%;
+					@include font(arial-regular);
+					line-height: 2em;
+					span{
+						margin-right: 10px;
+					}
+				}
+			}
+		}
+	}
+}
+.more-comment{
+	margin-top: 10px;
+	text-align: center;
+	@include font(pt-sans-bold);
+	a{
+		color: $Dark-gray;
+	}
+}
+@include responsive(mobile){
+	.compitition-notification-wrapper{
+		.count-down {
+			.timer-box{
+				width: 84%;
+				.p1{
+					font-size: 30px;
+				}
+			}
+		}
+		.video{
+			.video-gallery{
+				li{
+					width: 49%;
+					margin-right: 7px;
+					margin-bottom: 7px;
+					&:last-child{
+						margin-right: 0;
+					}
+					&:nth-child(even){
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+}
+@include responsive(big-mobile){
+	.compitition-notification-wrapper{
+		.video{
+			.video-gallery{
+				li{
+					width: 49%;
+					margin-right: 7px;
+					margin-bottom: 7px;
+					&:last-child{
+						margin-right: 0;
+					}
+					&:nth-child(even){
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+}
+@include responsive(tab-portrait){
+	.compitition-notification-wrapper{
+		.video{
+			.video-gallery{
+				li{
+					width: 49%;
+					margin-right: 7px;
+					margin-bottom: 7px;
+					&:last-child{
+						margin-right: 0;
+					}
+					&:nth-child(even){
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+}

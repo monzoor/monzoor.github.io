@@ -1,0 +1,129 @@
+.bates-right{
+	.headline{
+		font-weight: bold;
+	}
+	.small{
+		font-size: 12px;
+	}
+	.small2{
+		font-size: 13px;
+	}
+	.border{
+		@include clearfix;
+		margin: 10px 0;
+		border: 0;
+		border-bottom: 1px solid #37C0C6;
+		clear: both;
+	}
+	.border2{
+		border-bottom: 2px solid $Dark-gray;
+		@include clearfix;
+		margin: 10px 0;
+	}
+	.blue-box{
+		background-color: $Very-light-brand-blue;
+		padding: 10px;
+		@include clearfix;
+	}
+	.tab-navs{
+		display: none;
+	}
+	.close{
+		margin-top: 5px;
+		padding-bottom: 0;
+	}
+	input[type="text"]{
+		@include input(100px, 25px, $White, 0);
+		padding: 5px 10px;
+		&:focus{
+			border: 1px solid $Yellow-dark;
+		}
+	}
+	.big1{
+		font-size: 30px;
+	}
+	.big2{
+		font-size: 24px;
+	}
+	.subm{
+		@include common-button(200px,$White, $Brand-blue, $Dark-brand-blue);
+		height: 32px;
+		font-weight: bold;
+		font-size: 25px;
+		margin: auto;
+	}
+		
+}
+.close-holder{
+		width: 16%;
+		height: 50px;
+		position: absolute;
+		right: 0;
+		z-index: 1020;
+		cursor: pointer;	
+		button{
+			border: 0;
+			padding: 0;
+			margin: 0;
+			width: 100%;
+		}
+		img{
+			height: 124%;
+		}
+	}
+
+@include responsive(mobile){
+	.bates-right{
+		.ui-tabs .ui-tabs-nav li{
+			width: 50%
+		}
+	}
+
+	.bates-right .ui-tabs .ui-tabs-nav, .md-modal .ui-tabs .ui-tabs-nav{
+		width: 84%;
+	}
+	.bottom-sticky{
+		width: 100% !important;
+	}
+	.close-holder{
+		height: 64px;
+		img{
+			height: 61px;
+		}
+	}
+}
+@include responsive(big-mobile){
+	.bates-right{
+		.ui-tabs .ui-tabs-nav li{
+			width: 50%
+		}
+	}
+	.bates-right .ui-tabs .ui-tabs-nav, .md-modal .ui-tabs .ui-tabs-nav{
+		width: 84%;
+	}
+	.bottom-sticky{
+		width: 100% !important;
+	}
+
+}
+@include responsive(tab-portrait){
+	.bates-right .ui-tabs .ui-tabs-nav, .md-modal .ui-tabs .ui-tabs-nav{
+		width: 84%;
+	}
+	.bottom-sticky{
+		width: 100% !important;
+	}
+}
+@include responsive(tab-landscape){
+	.bates-right{
+		.ui-tabs .ui-tabs-nav li{
+			font-size: 17px;
+		}
+	}
+	.bates-right .ui-tabs .ui-tabs-nav, .md-modal .ui-tabs .ui-tabs-nav{
+		width: 100%;
+	}
+	.bottom-sticky{
+		width: 100% !important;
+	}
+}

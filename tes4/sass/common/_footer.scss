@@ -1,0 +1,31 @@
+.footer {
+	padding: 0;
+}
+footer {
+	background-color: #000;
+	margin: 0;
+	padding: 20px 0 10px;
+	ul {
+		margin: 0 auto;
+		text-align: center;
+	}
+	li{
+		margin-right: 20px;
+		font-size: 12px;
+		display: inline-block;
+		a {
+			color: white;
+			text-decoration: none;
+			&:hover {
+				color: $base_green;
+				text-decoration: none;
+			}
+		}		
+	}
+	p {
+		margin-top: 10px;
+		color: white;
+		margin-bottom: 0;
+		font-size: 11px;
+	}
+}

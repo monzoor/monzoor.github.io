@@ -1,0 +1,83 @@
+
+input[type="text"], input[type="email"], input[type="search"], input[type="password"] {
+	-webkit-appearance: caret;
+	-moz-appearance: caret; /* mobile firefox too! */
+	border-radius: 0;
+}
+
+
+input[type="text"],input[type="password"],textarea{
+	@include placeholder {
+					color: $Placeholder-color;
+				}
+}
+textarea{
+	
+	padding: 2%;
+	@include input(96%,67px,$White,0,$White);
+	font-size: 14px;
+	resize: none;
+	&.small{
+		height: 55px;
+	}
+}
+textarea { overflow: auto; }
+label{
+	@extend p;
+	font-weight: bold;
+	display: block;
+	margin-bottom: 10px;
+	@extend .fl;
+}
+select {
+	&.select {
+		border: 0 !important;  /*Removes border*/
+		-webkit-appearance: none;  /*Removes default chrome and safari style*/
+		-moz-appearance: none; /* Removes Default Firefox style*/
+		background: $White url(../../images/select1.png) no-repeat 90% center;
+		width: 100px; /*Width of select dropdown to give space for arrow image*/
+		text-indent: 0.01px; /* Removes default arrow from firefox*/
+		text-overflow: "";  /*Removes default arrow from firefox*/ /*My custom style for fonts*/
+		color: $Dark-gray;
+		padding: 5px;
+		@include border-top-radius(0px);
+		@include border-right-radius(0px);
+		@include border-bottom-radius(0px);
+		@include border-left-radius(0px);
+	}
+	&.disabled{
+		color: $Placeholder-color;
+		background: $Very-light-gray url(../../images/select1.png) no-repeat 90% center;
+	}
+}
+//checkbox
+input[type=radio].css-checkbox {
+							position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
+						}
+
+input[type=radio].css-checkbox + label.css-label {
+	padding-left:25px;
+	height:20px; 
+	display:inline-block;
+	line-height:20px;
+	background-repeat:no-repeat;
+	background-position: 0 0;
+	font-size: 14px;
+	@include font(pt-sans-regular);
+	vertical-align:middle;
+	cursor:pointer;
+
+}
+
+input[type=radio].css-checkbox:checked + label.css-label {
+	background-position: 0 -20px;
+}
+label.css-label {
+	background-image:url(../../images/csscheckbox.png);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}

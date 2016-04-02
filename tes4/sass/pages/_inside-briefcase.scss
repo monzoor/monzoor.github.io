@@ -1,0 +1,33 @@
+.inside_briefcase {
+  // height: 100vh;
+  background-image: url("../images/W6T0A7NDTF.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: white !important;
+  padding: 0!important;
+  // margin: 60px auto;
+  .row{
+    display: table;
+    height: 100vh;
+    .container-full {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+  .content {
+    padding-top: 30px;
+  }
+  @include responsive(mobile) {
+    height: auto;
+    padding-bottom: 80px;
+  }
+  @include responsive(tab-portrait) {
+    height: auto;
+    padding-bottom: 80px;
+  }
+  @include responsive(tab-landscape) {
+    height: auto;
+    padding-bottom: 80px;
+  }
+}

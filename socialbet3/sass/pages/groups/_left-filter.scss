@@ -1,0 +1,51 @@
+.filter{
+	background-color: $Very-light-gray;
+	.col-wp{
+		padding: 6% 8%;
+		width: 84%;
+	}
+	.filters{
+		margin-top: 20px;
+		width: 90%;
+		background-color: #f1f2f2;
+		padding: 5%;
+		select{
+			height: 26px;
+			width: 100%;
+		}
+	}
+}
+.groups-wrapper{
+	.search-box2{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.filters{
+		display: none;
+		position: absolute;
+		width: 80%;
+		margin-top: 10px;
+		background-color: #f1f2f2;
+		padding: 5%;
+		z-index: 10;
+		label{
+			width: 100%;
+		}
+		select.select{
+			width: 100%;
+		}
+	}
+	.filter-button{
+		cursor: pointer;
+		position: absolute;
+		right: 30px;
+		top: 30px;
+		span{
+			margin-top: 3px;
+			float: right;
+			margin-left: 12px;
+			&.icon-arrowdropup{
+				display: none;			}
+		}
+	}
+}

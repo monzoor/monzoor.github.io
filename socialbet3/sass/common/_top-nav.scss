@@ -1,0 +1,379 @@
+.search-button{
+	width: 15%;
+	height: 35px;
+	background-color: $White;
+	font-size: 18px;
+	color: $Brand-blue;
+	border: 0;
+}
+.top-navigation-wrapper{
+	width: 100%;
+	height: 54px;
+	background-color: $Light-gray;
+	@include clearfix;
+	.mob-nav{
+		float: left;
+		font-size: 24px;
+		width: 50px;
+		padding: 16px 0 0 20px;
+		display: none;
+		cursor: pointer;
+	}
+	.left-nav-box{
+		width: 462px;
+		height: 54px;
+		@extend .fl;
+		>ul{
+			margin: 20px 0 0 14px;
+			@include clearfix;
+		}
+		li{
+			float: left;
+			margin-right: 38px;
+			font-size: 18px;
+			a{
+				color: $Brand-red;
+				span{
+					font-size: 12px;
+					margin-left: 5px;
+				}
+			}
+		}
+
+		& li:last-child{
+				margin-right: 0;
+			}
+	}
+	.search-box{
+		width: 188px;
+		height: 54px;
+		@extend .fl;
+		form{
+			margin: 10px 0 0 0;
+		}
+		input[type="text"]{
+				@extend .fl;
+				@include input(85%, 35px, $White, 0, $White);
+				padding: 0;
+			}
+	}
+	.toggle-box{
+		width: 127px;
+		overflow: hidden;
+		@extend .fl;
+		margin-left: 11px;
+		margin-top: 10px;
+		.switch-light{
+			margin-left: 0;
+		}
+	}
+	.top-right-nav{
+		width: 280px;
+		height: 54px;
+		@extend .fr;
+		li{
+			display: inline-block;
+			text-align: center;
+			font-size: 20px;
+			border-left: 1px solid $White;
+			padding: 19px 16px 12px;
+			a{
+				color: $Brand-blue;
+			}
+			&.selected a{
+				color: $Brand-red;
+			}
+			.notification-counter{
+				position: absolute;
+				right: 10px;
+				bottom: 8px;
+				width: 18px;
+				height: 18px;
+				background-color: $Brand-red;
+				color: $White;
+				font-size: 12px;
+				text-align: center;
+				@include border-top-radius(100%);
+				@include border-bottom-radius(100%);
+				@include border-left-radius(100%);
+				@include border-right-radius(100%);
+				span{
+					margin-top: 4px;
+					display: block;
+				}
+			}
+		}
+	}
+}
+.search-popup{
+	width: 100%;
+	padding: 8px;
+	height: 150px;
+	.close-abs{
+		@include close($White, transparent);
+		font-size: 21px;
+	}
+	p{
+		font-size: 36px;
+		@include font(league-gothic-regular);
+		color: $White;
+	}
+	input[type="text"]{
+		@include input(50%, 37px, $White, 0,transparent, none, 5px);
+		@extend .fl;
+	}
+	.fill-balance{
+		height: 47px;
+		border-left: 0;
+		border-right: 0;
+		border-top: 0;
+		font-size: 32px;
+		float: left;
+		padding: 3px;
+	}
+}
+@include responsive(mobile){
+	.search-popup .fill-balance { width: 42%;}
+	.top-navigation-wrapper{
+		.mob-nav{
+			display: block;
+		}
+		.top-right-nav{
+			width: 54px;
+			overflow: hidden;;
+			li{
+				&.selected a{
+					color: $Brand-blue;
+				}
+				border-left: 0;
+			}
+		}
+		.search-button{
+				background-color: transparent;
+				float: right;
+				cursor: pointer;
+				width: auto;
+				height: auto;
+				margin: 19px 0px 0 0px;
+			}
+		.left-nav-box{
+			width: 143px;
+			>ul{
+				margin-top: 2px;
+				@include clearfix;
+				cursor: pointer;
+				&:hover  li>ul,&:focus  li>ul{
+					visibility: visible;
+				}
+				li{
+					padding: 9px 0;
+					>a{
+						
+					}
+					.mob-head{
+						font-size: 30px;
+						color: $Brand-red;
+						cursor: pointer;
+						span {
+							font-size: 18px;
+							margin-left: 10px;
+						}
+					}
+				}
+				li> ul{
+					visibility: hidden;
+					position: absolute;
+					z-index: 2;
+					margin-top: 9px;
+					width: 144px;
+					background-color: #EAEAEA;
+					margin-left: -9px;
+					-webkit-box-shadow: -1px 0px 19px 8px rgba(0, 0, 0, 0.13);
+					-moz-box-shadow:    -1px 0px 19px 8px rgba(0, 0, 0, 0.13);
+					box-shadow:         -1px 0px 19px 8px rgba(0, 0, 0, 0.13);
+					> li{
+						padding: 10px 0;
+						clear: both;
+					}
+				}
+			}
+			li{
+				width: 100%;
+				text-align: center;
+			}
+			
+			& li:last-child{
+					margin-right: 0;
+				}
+		}
+	}
+}
+@include responsive(big-mobile){
+	.top-navigation-wrapper{
+		.top-right-nav{
+			width: 54px;
+			overflow: hidden;;
+			li{
+				&.selected a{
+					color: $Brand-blue;
+				}
+				border-left: 0;
+			}
+		}
+		.search-box{
+			display: none;
+		}
+		.search-button{
+			background-color: transparent;
+			float: right;
+			cursor: pointer;
+			width: auto;
+			height: auto;
+			margin: 19px 0px 0 0px;
+		}
+		.left-nav-box{
+			width: 90px;
+			>ul{
+				margin-top: 10px;
+				@include clearfix;
+				&:hover  li>ul{
+					visibility: visible;
+				}
+				li{
+					padding: 9px 0;
+					.mob-head{
+						font-size: 22px;
+						color: $Brand-red;
+						cursor: pointer;
+						span {
+							font-size: 16px;
+							margin-left: 10px;
+						}
+					}
+				}
+				li> ul{
+					visibility: hidden;
+					position: absolute;
+					z-index: 2;
+					margin-top: 9px;
+					width: 144px;
+					background-color: #EAEAEA;
+					margin-left: -9px;
+					-webkit-box-shadow: -1px 0px 19px 8px rgba(0, 0, 0, 0.13);
+					-moz-box-shadow:    -1px 0px 19px 8px rgba(0, 0, 0, 0.13);
+					box-shadow:         -1px 0px 19px 8px rgba(0, 0, 0, 0.13);
+					> li{
+						padding: 10px 0;
+						clear: both;
+					}
+				}
+			}
+			li{
+				width: 100%;
+				text-align: center;
+			}
+			
+			& li:last-child{
+					margin-right: 0;
+				}
+		}
+	}
+	.search-popup{
+		input[type="text"]{
+			width: 45%;
+		}
+	}
+}
+@include responsive(tab-landscape){
+	.top-navigation-wrapper{
+
+	}
+	.left-nav-box{
+		width: 412px;
+		li{
+			margin-right: 30px;
+		}
+	}
+	.top-navigation-wrapper{
+		.top-right-nav{
+			width: 54px;
+			overflow: hidden;
+			li{
+				&.selected a{
+					color: $Brand-blue;
+				}
+			}
+		}
+	}
+	
+}
+@include responsive(tab-portrait){
+	.top-navigation-wrapper{
+		.top-right-nav{
+			width: 54px;
+			overflow: hidden;;
+			li{
+				&.selected a{
+					color: $Brand-blue;
+				}
+				border-left: 0;
+			}
+		}
+		.search-box{
+			display: none;
+		}
+		.search-button{
+			background-color: transparent;
+			float: right;
+			cursor: pointer;
+			width: auto;
+			height: auto;
+			margin: 19px 0px 0 0px;
+		}
+		.left-nav-box{
+			width: 452px;
+			li{
+				margin-right: 30px;
+			}
+		}
+	}
+}
+@include responsive(small-desktop){
+	.top-navigation-wrapper{
+		.left-nav-box{
+			width: 424px;
+			li{
+				margin-right: 32px;
+			}
+		}
+		.top-right-nav {
+			li{ 
+				.notification-counter{
+					display: none;
+				}
+			}
+		}
+	} 
+}
+@include responsive(desktop){
+	.top-navigation-wrapper{
+		.top-right-nav {
+			li{ 
+				.notification-counter{
+					display: none;
+				}
+			}
+		}
+	} 
+}
+@include responsive(big-desktop){
+	.top-navigation-wrapper{
+		.top-right-nav {
+			li{ 
+				.notification-counter{
+					display: none;
+				}
+			}
+		}
+	} 
+}

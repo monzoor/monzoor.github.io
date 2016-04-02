@@ -1,0 +1,189 @@
+.information{
+	width: 100%;
+	@include clearfix;
+	@extend .mg20;
+	li{
+		display: inline-block;
+		margin-right: 20px;
+		@extend .pt;
+		a{
+			color: $Dark-gray;
+			@extend .b;
+		}
+		&.selected{
+			a{
+				color: $Brand-red;
+				border-bottom: 2px solid $Brand-red;
+			}
+		}
+	}
+}
+
+.group-wrapper{
+	.search-box2{
+		width: 100%;
+		input[type="text"]{
+			width: 86%;
+		}
+		.search-button{
+			width: 10%;
+		}
+	}
+}
+.g-members{
+	&.my-message-wrapper {
+		.name-box{
+			width: 50%;
+		}
+		.message{
+			width: 35%;
+			height: 65px;
+			border-left: 1px solid $Placeholder-color;
+			padding-left: 10px;
+			.brand-blue{
+				color: $Brand-blue;
+				text-decoration: underline;
+			}
+		}
+	}
+}
+@include responsive(mobile){
+	.g-members{
+		&.my-message-wrapper {
+			.name-box{
+				width: 50%;
+			}
+			.message{
+				width: 85%;
+				border-left: 0;
+				border-top: 1px solid $Placeholder-color;
+				padding-left: 0;
+				padding-top: 10px;
+				height: 35px;
+				p{
+					float: left;
+					padding-right: 10px;
+					border-right: 1px solid $Placeholder-color;
+					margin-right: 10px;
+					&:last-child{
+						border-right: 0px solid $Placeholder-color;
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+	.information{
+		&.seceond-nav{
+			li{
+				margin-right: 10px;
+			}
+		}
+	}
+}
+@include responsive(big-mobile){
+	.g-members{
+		&.my-message-wrapper {
+			.name-box{
+				width: 50%;
+			}
+			.message{
+				width: 85%;
+				border-left: 0;
+				border-top: 1px solid $Placeholder-color;
+				padding-left: 0;
+				padding-top: 10px;
+				height: 25px;
+				p{
+					float: left;
+					padding-right: 10px;
+					border-right: 1px solid $Placeholder-color;
+					margin-right: 10px;
+					&:last-child{
+						border-right: 0px solid $Placeholder-color;
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+}
+@include responsive(tab-portrait){
+	.g-members{
+		&.my-message-wrapper {
+			.name-box{
+				width: 50%;
+			}
+			.message{
+				width: 85%;
+				border-left: 0;
+				border-top: 1px solid $Placeholder-color;
+				padding-left: 0;
+				padding-top: 10px;
+				height: 35px;
+				p{
+					float: left;
+					padding-right: 10px;
+					border-right: 1px solid $Placeholder-color;
+					margin-right: 10px;
+					&:last-child{
+						border-right: 0px solid $Placeholder-color;
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+	.information{
+		&.seceond-nav{
+			li{
+				margin-right: 10px;
+			}
+		}
+	}
+}
+// modal
+.appointment{
+	.small{
+		width: 16%;
+		margin-right: 20px;
+		img{
+			width: 100%;
+		}
+	}
+	.checkbox{
+		margin-top: 10px;
+		label{
+			padding: 0;
+		}
+		.placeholder-color{
+			line-height: 15px;
+			display: inline-block;
+			margin-top: 6px;
+		}
+		tr{
+			height: 78px;
+			display: block;
+		}
+	}
+	.form-box{
+		.icheckbox_minimal{
+			border: 1px solid black !important;
+		}
+	}
+}
+@include responsive(mobile){
+	.manage{
+		width: 95% !important;
+	}
+}
+@include responsive(big-mobile){
+	.manage{
+		width: 95% !important;
+	}
+}
+@include responsive(tab-portrait){
+	.manage{
+		width: 95% !important;
+	}
+}

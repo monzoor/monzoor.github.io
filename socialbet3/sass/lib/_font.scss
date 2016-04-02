@@ -1,0 +1,17 @@
+//importing pt sans font
+@import "https://www.google.com/fonts#QuickUsePlace:quickUse/Family:PT+Sans:400,700,400italic,700italic";
+//importing League Gothic from font lib
+@font-face {
+    font-family: 'league_gothicregular';
+    src: url('../../font/leaguegothiccyrillic.eot');
+    src: url('../../font/leaguegothiccyrillic.eot?#iefix') format('embedded-opentype'),
+         url('../../font/leaguegothiccyrillic.woff') format('woff'),
+         url('../../font/leaguegothiccyrillic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+//Font family variable
+$Pt-sans: 'PT Sans', sans-serif;
+$League-gothic: 'league_gothicregular', sans-serif;
+$Arial: "Arial", sans-serif;

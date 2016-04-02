@@ -1,0 +1,181 @@
+body{
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: $open-sans;
+	position: relative;
+}
+
+* a{
+	text-decoration: none;
+	// color: $base_text;
+}
+* ul {
+	margin: 0;
+	padding: 0;
+}
+* li{
+	list-style: none;
+}
+img {
+	display: block;
+}
+
+:focus {outline:none;}
+button::-moz-focus-inner {
+  border: 0;
+}
+input {
+	outline-color: transparent;
+	box-shadow: 0px 0px 0px #888888;
+}
+
+// Clearfix
+%center{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+%clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.img-center {
+    margin: 0 auto;
+}
+.row-center-align {
+	float: none;
+	margin: 0 auto;
+}
+
+h1,h2,h3 {
+	margin: 0 0 30px;
+}
+h1 + p {
+		margin-bottom: 0;
+	}
+h1{
+	text-transform: uppercase;
+}
+p {
+	line-height: 1.6;
+	margin-bottom: 20px;
+	&.font-sm {
+		font-size: 18px;
+	}
+}
+.headline-text {
+	h1 {
+		margin-bottom: 10px;
+	}
+	p{
+		margin-bottom: 70px;
+		color: $secondary_text;
+		&.with_bg {
+			color: white;
+		}
+	}
+}
+.weightThin { font-weight: 300 }
+.weightRegular { font-weight: 400 }
+.weightSemibold { font-weight: 600 }
+.weightBold { font-weight: 700 }
+.weightxBold { font-weight: 800 }
+
+.section_bg {
+	background-color: $section_bg;
+}
+
+section {
+	padding: 60px 0 30px;
+}
+
+.dl-horizontal dd {
+	margin-left: 60px;
+	margin-bottom: 20px;
+	p{
+		margin-bottom: 10px;
+	}
+}
+.dl-horizontal dt {
+	width: 40px;
+	text-align: left;
+	float: left;
+	font-size: 38px;
+	color: $base_green;
+}
+.reponsive-pull-right {
+	float: right !important;
+	@include responsive(mobile){
+		float: none !important;
+	}
+}
+.bg-green {
+	background-color: $base_green;
+}
+.no-margin {
+	margin: 0;
+}
+.btn {
+	border-radius: 0;
+	&.ask {
+		border: 1px solid  $base_green;
+		margin: 30px auto;
+		color: white;
+		display: table;
+		text-transform: uppercase;
+		    letter-spacing: 8px;
+    font-weight: 700;
+	}
+}
+.special {
+	padding-bottom : 70px;
+}
+.marginbot-20 {
+	margin-bottom: 20px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+
+form#contact-form .form-group label {
+	text-align: left !important;
+	display: block;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+form#contact-form input,form#contact-form select,form#contact-form textarea {
+	font-size: 14px;
+	line-height: 1.6em;
+	border: 1px solid #eee;
+  -webkit-box-shadow: none;
+          box-shadow:  none;
+	border-radius: 2px;
+}
+
+.btn-lg,
+.btn-group-lg > .btn {
+  border-radius: 2px;
+}
+
+form#contact-form input:focus,form#contact-form select:focus,form#contact-form textarea:focus {
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+}
+.input-group-addon {
+  background-color: #fefefe;
+  border: 1px solid #eee;
+}
+
+.widget-contact {
+	text-align: left;
+}
+
+.active_form {
+	background-color: #15f2cd;
+	    height: 429px;
+}

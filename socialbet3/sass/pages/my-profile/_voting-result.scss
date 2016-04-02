@@ -1,0 +1,75 @@
+.voting-result-wrapper{
+	width: 100%;
+	height: auto;
+	background-color: $White;
+	margin-top: 10px;
+	@include clearfix;
+	.progessbar-wrapper{
+		width: 100%;
+		margin-bottom: 10px;
+		@include clearfix;
+		.progess{
+			height: 15px;
+			width: 87%;
+			background-color: #c5e0e1;
+			@include border(2px, $Brand-blue);
+			@extend .fl;
+			text-align: center;
+			position: relative;
+			p{
+				position: absolute;
+				margin: auto;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				font-size: 11px;
+				padding-top: 2px;
+			}
+			.bar{
+				background-color: $Brand-blue;
+				width: 20%;
+				height: 15px;
+			}
+		}
+		p{
+			font-weight: bold;
+		}
+	}
+}
+@include responsive(tab-landscape){
+	.voting-result-wrapper{
+		.progessbar-wrapper{
+			.progess{
+				width: 84%;
+			}
+		}
+	}
+}
+@include responsive(tab-portrait){
+	.voting-result-wrapper{
+		.progessbar-wrapper{
+			.progess{
+				width: 84%;
+			}
+		}
+	}
+}
+@include responsive(big-mobile){
+	.voting-result-wrapper{
+		.progessbar-wrapper{
+			.progess{
+				width: 84%;
+			}
+		}
+	}
+}
+@include responsive(mobile){
+	.voting-result-wrapper{
+		.progessbar-wrapper{
+			.progess{
+				width: 82%;
+			}
+		}
+	}
+}

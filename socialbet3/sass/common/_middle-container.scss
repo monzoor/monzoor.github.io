@@ -1,0 +1,72 @@
+.middle-container-wrapper{
+	width: 53%;
+	height: auto;
+	background-color: $Very-light-gray;
+	padding: 20px 2%;
+	@extend .fl;
+	@include clearfix;
+	-webkit-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.13);
+	-moz-box-shadow:    -1px 0px 5px 0px rgba(0, 0, 0, 0.13);
+	box-shadow:         -1px 0px 5px 0px rgba(0, 0, 0, 0.13);
+	h1{
+		width: 100%;
+		@include clearfix;
+		border-bottom: 4px solid $Dark-gray;
+		color: $Dark-gray;
+		display: table-cell;
+		span{
+			color: $Brand-red;
+			margin-left: 5px;
+		}
+	}
+}
+.middle-container-wrapper-2col{
+	width: 70%;
+	padding-top: 0;
+	@extend .middle-container-wrapper;
+}
+.middle-container-wrapper-2col-wide{
+	width: 79%;
+	padding-top: 0;
+	@extend .middle-container-wrapper;
+}
+.middle-container-wrapper-1col{
+	width: 100%;
+	padding: 0;
+	@extend .middle-container-wrapper;
+}
+
+@include responsive(tab-portrait){
+	.middle-container-wrapper{
+		width: 56%;
+		&.middle-container-wrapper-2col-wide{
+			width: 96%;
+		}
+	}
+	.middle-container-wrapper-1col{
+		width: 100%;
+	}
+}
+@include responsive(big-mobile){
+	.middle-container-wrapper{
+		width: 96%;
+	}
+	.middle-container-wrapper-1col{
+		width: 100%;
+	}
+}
+@include responsive(mobile){
+	.middle-container-wrapper{
+		width: 96%;
+	}
+	.middle-container-wrapper-1col{
+		width: 100%;
+	}
+	.bates{
+		.middle-container-wrapper{
+			width: 96%;
+			padding-top: 0;
+		}
+	}
+}
+

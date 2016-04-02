@@ -1,0 +1,81 @@
+<?php global $wpdb, $sbdb; ?>
+
+<div class="wrap">
+
+	<h2><?php printf(__('Markets for "%s"', 'socialbet'), $event->post_title ); ?>
+		<a href="<?php echo admin_url('edit.php?post_type=event');?>" class="add-new-h2"><?php print __('Back to Event Lists', 'socialbet'); ?></a>
+		<a href="<?php echo admin_url('edit.php?post_type=event&page=create-market&event='.$event->ID);?>" class="add-new-h2"><?php print __('Add New', 'socialbet'); ?></a>
+	</h2>
+
+	<br />
+
+	<?php
+	if ( isset( $_GET['message'] ) ) {
+
+		if ( $_GET['message'] == '3' ) {
+			
+			echo '<div class="socbet-alert alert-success">' . __('Success remove the data!', 'socialbet') . '</div>';
+		
+		} else if ( $_GET['message'] == '6' ) {
+			
+			echo '<div class="socbet-alert alert-danger">' . __('Cannot remove the data, security check is failed!', 'socialbet') . '</div>';
+		
+		}
+
+	}
+	?>
+
+	<?php
+	if ( $markets ) {
+	?>
+
+			<table class="wp-list-table widefat fixed">
+				<thead>
+					<tr>
+						<th scope="col" class="manage-column"><?php print __('Market Name', 'socialbet'); ?></th>
+						<th scope="col" class="manage-column"><?php print __('Odds', 'socialbet'); ?></th>
+						<th scope="col" class="manage-column"><?php print __('Action', 'socialbet'); ?></th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<th scope="col" class="manage-column"><?php print __('Market Name', 'socialbet'); ?></th>
+						<th scope="col" class="manage-column"><?php print __('Odds', 'socialbet'); ?></th>
+						<th scope="col" class="manage-column"><?php print __('Action', 'socialbet'); ?></th>
+					</tr>
+				</tfoot>
+
+				<tbody>
+					<?php
+					foreach( $markets as $market ) {
+						?>
+
+						<tr>
+							<td><?php print $market->name; ?></td>
+							<td><?php printf( __('%d odds', 'socialbet'), $sbdb->count( 'socbet_odds', "market_id={$market->id}" ) ); ?></td>
+							<td>
+								<a href="<?php echo admin_url("edit.php?post_type=event&page=edit-market&event={$event->ID}&market_id={$market->id}"); ?>"><?php print __('Edit', 'socialbet'); ?></a>
+								|
+								<a href="<?php echo wp_nonce_url( admin_url("edit.php?post_type=event&page=show-markets&event={$event->ID}&market_id={$market->id}&action=delete"), 'socbet-remove-market', '_wpnonce'); ?>"><?php print __('Remove', 'socialbet'); ?></a>
+							</td>
+						</tr>
+
+						<?php
+					}
+					unset( $market );
+					?>
+
+				</tbody>
+
+			</table>
+
+			<?php
+
+		} else {
+
+			print __('No market data for this event', 'socialbet');
+
+		}
+	?>
+
+</div>

@@ -1,0 +1,42 @@
+.group-discussion{
+	.pagination{
+		a{
+			@extend .pt;
+			margin-right: 10px;
+			color: $Dark-gray;
+			@extend .font12;
+			font-weight: bold;
+		}
+		.selected{
+			color: $Brand-blue !important;
+			text-decoration: underline;
+		}
+	}
+	.info-holder{
+		.sub-info2{
+			font-weight: normal;
+		}
+		.sub-info {
+			img{
+				width: auto;
+				margin-right: 10px;
+			}
+			a{
+				color: $Placeholder-color;
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	.profile-dialogue-wrapper .image-info-box .info-holder{
+		width: 86%;
+	}
+}
+@include responsive(mobile){
+	.group-discussion{
+		.profile-dialogue-wrapper .image-info-box .info-holder{
+			width: 79%;
+		}
+	}
+}

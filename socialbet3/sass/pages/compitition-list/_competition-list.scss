@@ -1,0 +1,43 @@
+.compitition-list-wrapper{
+	.competition-box-wrapper{
+		.img-holder{
+			height: 253px;
+			.free-notice{
+				font-size: 45px;
+			}
+			.timer-box{
+				top: auto;
+				bottom: 20px;
+			}
+		}
+		.yellow-box{
+			top: 10px;
+			left: 10px;
+			.p1{
+				@include text-style(pt-sans-bold, $Yellow, $size: 12px)
+			}
+			.p2{
+				@include text-style(league-gothic-regular, $Yellow, $size: 42px)
+			}
+		}
+		.txt{
+			font-size: 12px;
+		}
+		.fill-balance{
+			width: 50%;
+			&.gray-filler{
+				background-color: #dcdcdc;
+				border-bottom: 4px solid #bebebe;
+			}
+		}
+	} 
+}
+@include responsive(tab-portrait){
+	.compitition-list-wrapper{
+		.competition-box-wrapper{
+			li{
+				width: 47%;
+			}
+		}
+	}
+}

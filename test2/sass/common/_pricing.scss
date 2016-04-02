@@ -1,0 +1,275 @@
+.pricing {
+
+	tbody {
+		background: #f7f7f7;
+		border: 0;
+		tr {
+			td {
+				vertical-align: middle;
+			}
+		}
+	}
+	.table>thead>tr>th {
+		border: 0;
+	}
+}
+
+/*
+ * -- PRICING TABLE WRAPPER --
+ * This element wraps up all the pricing table elements
+ */
+.pricing-tables,
+ .information {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.pricing-tables {
+  margin-bottom: 3.125em;
+  text-align: center;
+}
+
+/*
+ * -- PRICING TABLE HEADER COLORS --
+ * Choose a different color based on the type of pricing table.
+ */
+.pricing-table-free .pricing-table-header {
+  background: #519251;
+  text-align: center;
+}
+
+.pricing-table-biz .pricing-table-header {
+  background: #2c4985;
+  text-align: center;
+}
+
+/*
+ * -- PRICING TABLE HEADER --
+ * By default, a header is black/white, and has some styles for its <h2> name.
+ */
+.pricing-table-header {
+  background: #111;
+  color: #fff;
+}
+
+.pricing-table-header h2 {
+  margin: 0;
+  padding-top: 2em;
+  font-size: 1.4em;
+  font-weight: normal;
+	letter-spacing: 0.25em;
+	text-transform: uppercase;
+}
+
+
+/*
+ * -- PRICING TABLE PRICE --
+ * Styles for the price and the corresponding <span>per month</span>
+ */
+.pricing-table-price {
+  font-size: 6em;
+  margin: 0.2em 0 0;
+  font-weight: 100;
+}
+
+.pricing-table-price span {
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.2em;
+  padding-bottom: 2em;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+  *color: #fff;
+}
+
+
+
+.pricing-table-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  img {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  p{
+    margin-bottom: 20px;
+  }
+  &.border {
+    border-bottom: 1px solid black;
+  }
+}
+
+
+/*
+ * -- PRICING TABLE LIST ELEMENTS --
+ * Styles for the individual list elements within each pricing table
+ */
+.pricing-table-list >div {
+  padding: 20px 10px;
+  span {
+  	font-size: 20px;
+  	color: $base_green;
+  	&.red {
+  		color: red
+  	}
+  }
+}
+
+
+
+
+
+
+.card {
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -o-perspective: 1000px;
+  -ms-perspective: 1000px;
+  position:relative;
+  
+}
+
+.card .content {
+  transition: 0.5s ease-out;
+  -webkit-transition: 0.5s ease-out;
+  -moz-transition: 0.5s ease-out;
+  -o-transition: 0.5s ease-out;
+  -ms-transition: 0.5s ease-out;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+
+  /* content backface is visible so that static content still appears */
+  backface-visibility: visible;
+  -webkit-backface-visibility: visible;
+  -moz-backface-visibility: visible;
+  -o-backface-visibility: visible;
+  -ms-backface-visibility: visible;
+
+
+  border: 1px solid grey;
+  position:relative;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.card.applyflip .content {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+}
+
+
+.card .content .cardStatic {
+  /* Half way through the card flip, rotate static content to 0 degrees */
+  transition: 0s linear 0.17s;
+  -webkit-transition: 0s linear 0.17s;
+  -moz-transition: 0s linear 0.17s;
+  -o-transition: 0s linear 0.17s;
+  -ms-transition: 0s linear 0.17s;
+  transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+
+  text-align: center;
+  // position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+  line-height:100px;
+}
+
+.card.applyflip .content .cardStatic {
+  /* Half way through the card flip, rotate static content to -180 degrees -- to negate the flip and unmirror the static content */
+  transition: 0s linear 0.17s;
+  -webkit-transition: 0s linear 0.17s;
+  -moz-transition: 0s linear 0.17s;
+  -o-transition: 0s linear 0.17s;
+  -ms-transition: 0s linear 0.17s;
+  transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+}
+
+
+.card .content .cardFront, .card .content .cardBack {
+  /* Backface visibility works great for all but IE. As such, we mark the backface visible in IE and manage visibility ourselves */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  -ms-backface-visibility: visible;
+  // position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+.card .content .cardFront, .card.applyflip .content .cardFront {
+  transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+}
+
+.card .content .cardBack, .card.applyflip .content .cardBack {
+  transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+}
+
+.card .content .cardFront, .card.applyflip .content .cardBack {
+  /* IE Hack. Halfway through the card flip, set visibility. Keep other browsers visible throughout the card flip. */
+  animation: stayvisible 0.5s both;
+  -webkit-animation: stayvisible 0.5s both;
+  -moz-animation: stayvisible 0.5s both;
+  -o-animation: stayvisible 0.5s both;
+  -ms-animation: donothing 0.5s;
+  -ms-transition: visibility 0s linear 0.17s;
+  visibility: visible;
+}
+.card.applyflip .content .cardFront, .card .content .cardBack {
+  /* IE Hack. Halfway through the card flip, set visibility. Keep other browsers visible throughout the card flip. */
+  animation: stayvisible 0.5s both;
+  -webkit-animation: stayvisible 0.5s both;
+  -moz-animation: stayvisible 0.5s both;
+  -o-animation: stayvisible 0.5s both;
+  -ms-animation: donothing 0.5s;
+  -ms-transition: visibility 0s linear 0.17s;
+  visibility: hidden;
+}
+@keyframes stayvisible { from { visibility: visible; } to { visibility: visible; } }
+@-webkit-keyframes stayvisible { from { visibility: visible; } to { visibility: visible; } }
+@-moz-keyframes stayvisible { from { visibility: visible; } to { visibility: visible; } }
+@-o-keyframes stayvisible { from { visibility: visible; } to { visibility: visible; } }
+@-ms-keyframes donothing { 0% { } 100% { } }
+
+.applyflip {
+  .cardFront {
+    display: none;
+  }
+  .cardBack {
+    display: block
+  }
+}
+.cardBack {
+  display: none;
+}

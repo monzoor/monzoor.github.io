@@ -1,0 +1,38 @@
+.group-top-img{
+	width: 100%;
+	height: auto;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
+	height: 270px;
+	background-color: $Very-light-brand-blue;
+	@include clearfix;
+	.new-photo{
+		background-color: rgba(0,0,0,.5);
+		padding: 20px;
+		width: 190px;
+		height: 20px;
+		@extend .pt;
+	}
+}
+.top-avatar{
+	.new-avatar{
+		background-color: rgba(0, 0, 0, 0.5);
+		height: 50%;
+		width: 100%;
+		border-radius: 0 0 157px 157px;
+		-moz-border-radius: 0 0 157px 157px;
+		-webkit-border-radius: 0 0 157px 172px;
+		margin-bottom: 4px;
+		text-align: center;
+		a{
+			margin-top: 17px;
+			display: inline-block;
+			width: 60px;
+		}
+	}
+}
+.input-text{
+	width: 98%;
+	padding: 1%
+}

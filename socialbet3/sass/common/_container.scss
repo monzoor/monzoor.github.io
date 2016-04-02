@@ -1,0 +1,75 @@
+.left-gutter{
+	width: 12%;
+	height: 100%;
+	min-height: 800px;
+	@extend .brand-blue-bg;
+	@extend .fl;
+}
+.left-sidebar{
+	width: 12%;
+	height: 100%;
+	background-color: $Brand-blue;
+	@extend .fl;
+	@include clearfix;
+	@include font(league-gothic-regular);
+	color: $White;
+	position: absolute;
+	z-index: 1001;
+}
+.right-top-container{
+	width: 88%;
+	height: auto;
+	@extend .fl;
+	@include clearfix;
+	@include font(league-gothic-regular);
+}
+.main-container{
+	width: 88%;
+	height: auto;
+	position: relative;
+	@extend .fl;
+	@include clearfix;
+	@include font(league-gothic-regular);
+}
+
+@include responsive(tab-portrait){
+	.left-sidebar{
+		width: 7%;
+	}
+	.left-gutter{
+		width: 7%;
+	}
+	.right-top-container{
+		width: 93%;
+	}
+	.main-container {
+		width: 93%;
+	}
+}
+@include responsive(mobile){
+	.left-sidebar{
+		width: 45% !important;
+		margin-left: -45%;
+	}
+	.right-top-container{
+		width: 100%;
+	}
+	.main-container {
+		width: 100%;
+	}
+}
+@include responsive(big-mobile){
+	.left-sidebar{
+		width: 25% !important;
+		z-index: 1000;
+	}
+	.left-gutter{
+		width: 25%;
+	}
+	.right-top-container{
+		width: 75%;
+	}
+	.main-container {
+		width: 75%;
+	}
+}

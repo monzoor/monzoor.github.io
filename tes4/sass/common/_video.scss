@@ -1,0 +1,10 @@
+
+.video-section .pattern-overlay {
+	background-color: rgba(0, 0, 0, .5);
+	padding: 60px 0 32px;
+	min-height: 100vh; 
+	/* Incase of overlay problems just increase the min-height*/
+}
+
+.video-section .buttonBar{display:none;}
+.player {font-size: 1px;}

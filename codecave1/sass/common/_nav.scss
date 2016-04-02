@@ -1,0 +1,16 @@
+nav{
+	left: 20px;
+	width: 40px;
+	height: 163px;
+	margin: auto 0;
+	@extend %center;
+	z-index: 999;
+	position: fixed;
+	li{
+		font-size: 30px;
+		margin-bottom: 10px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}

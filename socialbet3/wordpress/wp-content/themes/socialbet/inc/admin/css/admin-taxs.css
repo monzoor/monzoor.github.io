@@ -1,0 +1,32 @@
+.wip-upload-form {
+	margin: 0 0 20px;
+	padding: 0;
+	position: relative;
+}
+.wip_form_preview {
+	display: block;
+	width: 80px;
+	height: 80px;
+	position: relative;
+	margin: 0 0 5px;
+	padding: 5px;
+	background-color: #fff;
+	border: 1px solid #dadada;
+}
+.wip_form_preview img{
+	display: block;
+	width: 80px;
+	height: auto;
+}
+.wip_form_preview a{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	background-color: #ff0000;
+	color: #fff;
+	font-size: 10px;
+}

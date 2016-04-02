@@ -1,0 +1,28 @@
+
+
+.t-caret {
+	font-size: 50px;
+	color: $base_green;
+	display: inline-block;
+	vertical-align: 6px;
+}
+.vis {
+	visibility: hidden;
+}
+.header1 {
+	color : $base_green;
+	font-size: 60px;
+	font-weight: 900;
+	@include responsive(mobile) {
+		font-size: 40px;
+	}
+}
+
+.header2 {
+	color : $white;
+	font-size: 45px;
+	font-weight: 400;
+	@include responsive(mobile) {
+		font-size: 20px;
+	}
+}

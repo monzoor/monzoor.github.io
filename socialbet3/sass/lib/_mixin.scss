@@ -1,0 +1,188 @@
+@mixin close($color,$bg-color){
+  background-color: $bg-color;
+  color: $color;
+  width: 25px;
+  height: 17px;
+  text-align: center;
+  padding: 4px 0;
+  cursor: pointer;
+  a{
+    color: $color;
+  }
+}
+
+@mixin common-button($width,$font-color, $bg-color, $border-color,$height:27px){
+  width: $width;
+  height: $height;
+  @include font(league-gothic-regular);
+  font-size: 21px;
+  color: $font-color;
+  background-color: $bg-color;
+  border-bottom: 4px solid $border-color;
+  text-align: center;
+  padding-top: 8px;
+  cursor: pointer;
+}
+
+@mixin input($width, $height, $bg-color, $border-size, $border-color:transparent, $focus-color:none, $padding:none){
+  width: $width;
+  height: $height;
+  background-color: $bg-color;
+  border: $border-size solid $border-color;
+  padding: $padding;
+  @include font(arial-regular);
+  color: $Dark-gray;
+  &:focus{
+    border: 1px solid $focus-color;
+    outline: 0 none;
+-moz-outline: 0 none;
+  }
+}
+
+@mixin text-style($font, $color: $Dark-gray, $size: 14px){
+  @include font($font);
+  color: $color;
+  font-size: $size;
+}
+
+@mixin circle($width, $bg-color){
+  width: $width;
+  height: $width;
+  background: $bg-color;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+}
+@mixin opacity($value) {
+  /* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$value)";
+
+  /* IE 5-7 */
+  filter: alpha(opacity=$value);
+
+  /* Netscape */
+  -moz-opacity: $value;
+
+  /* Safari 1.x */
+  -khtml-opacity: $value;
+
+  /* Good browsers */
+  opacity: $value;
+}
+@mixin border($size,$color){
+  border: $size solid $color;
+}
+//responsive mixin
+@mixin responsive($device){
+  @if $device == mobile{
+    @media only screen and (max-width : 414px){
+      @content;
+    }
+  }
+  @if $device == mobile-device{
+    @media only screen and (max-device-width : 414px){
+      @content;
+    }
+  }
+  @if $device == big-mobile{    
+    @media only screen and (min-width : 415px) and (max-width : 767px){
+      @content;
+    }
+  }
+  @if $device == tab-portrait{    
+    @media only screen and (min-width : 768px) and (max-width : 968px){
+      @content;
+    }
+  }
+
+  @if $device == tab-landscape{
+    @media only screen and (min-width : 969px) and (max-width: 1189px){
+      @content;
+    }
+  }
+
+  @if $device == small-desktop{
+    @media only screen and (min-width : 1190px) and (max-width: 1235px){
+      @content;
+    }
+  }
+
+  @if $device == desktop{
+    @media only screen and (min-width : 1236px) and (max-width: 1680px){
+      @content;
+    }
+  }
+
+  @if $device == big-desktop{
+    @media only screen and (min-width : 1681px){
+      @content;
+    }
+  }
+}
+@mixin font($type) {
+  //PT sans
+  @if $type == 'pt-sans-regular' {
+    font-family: $Pt-sans;
+    font-weight: 400;
+    font-style: normal;
+  } 
+  @if $type == 'pt-sans-italic' {
+    font-family: $Pt-sans;
+    font-weight: 400;
+    font-style: italic;
+  } 
+  @if $type == 'pt-sans-bold' {
+    font-family: $Pt-sans;
+    font-weight: 700;
+    font-style: normal;
+  } 
+  @if $type == 'pt-sans-bold-italic' {
+    font-family: $Pt-sans;
+    font-weight: 700;
+    font-style: italic;
+  } 
+  //League Gothic
+  @if $type == 'league-gothic-regular' {
+    font-family: $League-gothic;
+    font-weight: 400;
+    font-style: normal;
+  } 
+  @if $type == 'league-gothic-italic' {
+    font-family: $League-gothic;
+    font-weight: 400;
+    font-style: italic;
+  } 
+  @if $type == 'league-gothic-bold' {
+    font-family: $League-gothic;
+    font-weight: 700;
+    font-style: normal;
+  } 
+  @if $type == 'league-gothic-italic' {
+    font-family: $League-gothic;
+    font-weight: 700;
+    font-style: italic;
+  } 
+  //Arial
+  @if $type == 'arial-regular' {
+    font-family: $Arial;
+    font-weight: 400;
+    font-style: normal;
+  } 
+  @if $type == 'arial-italic' {
+    font-family: $Arial;
+    font-weight: 400;
+    font-style: italic;
+  } 
+  @if $type == 'arial-bold' {
+    font-family: $Arial;
+    font-weight: 700;
+    font-style: normal;
+  } 
+  @if $type == 'arial-italic' {
+    font-family: $Arial;
+    font-weight: 700;
+    font-style: italic;
+  } 
+}
+
+

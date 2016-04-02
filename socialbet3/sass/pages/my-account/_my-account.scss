@@ -1,0 +1,33 @@
+.my-account{
+	.bates-filter{
+		margin-left: 20px;
+	}
+	.top-link{
+		display: inline-flex;
+	}
+	.text{
+		margin-left: 20px;
+		margin-top: 10px;
+	}
+	.spl1{
+		@extend .white-bg;
+	}
+	.spl3{
+		@extend .light-yellow-bg;
+	}
+}
+
+@include responsive(mobile){
+	.my-account{
+		.bates-filter {
+			margin-left: 0;
+			select {
+				width: 130px;
+			}
+		}
+		.text{
+			margin-left: 0;
+		}
+
+	}
+}

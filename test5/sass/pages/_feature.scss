@@ -1,0 +1,40 @@
+.feature {
+	&.section_bg {
+		padding-top: 60px 0;
+	}
+	.row{
+	    display: table;
+	    // height: 100vh;
+	    .container-full {
+	      	display: table-cell;
+	      	vertical-align: middle;
+	    }
+	  }
+	.feature {
+		img {
+			margin-bottom: 20px;
+		}
+		p{
+			padding: 0 20px;
+			&.headline {
+				text-transform: uppercase;
+				font-size: 18px;
+			}
+		}
+	}
+	ul {
+		padding: 0 60px;
+	}
+	li { 
+    	padding-left: 1em; 
+    	list-style: disc outside;
+    	color: $base_green;
+    	font-size: 16px;
+    	p {
+    		font-size: 14px;
+    		color: #282828;
+    		padding: 19px 0 0 0 !important;
+    		margin-bottom: 0;
+    	}
+	}
+}

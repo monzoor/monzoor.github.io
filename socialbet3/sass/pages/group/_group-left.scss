@@ -1,0 +1,52 @@
+.group-left{
+	.top-avatar{
+		width: 50%;
+		margin: -25% 22%;	
+		display: inline-block;
+	}
+	.col-wp{
+		padding: 6% 8%;
+		width: 84%;
+		p{
+			line-height: 1.2em;
+		}
+		.link{
+			@include font(pt-sans-regular);
+			margin-top: 20px;
+			text-decoration: underline;
+			display: block;
+		}
+		.fill-balance{
+			width: 100%;
+			text-transform: uppercase;
+		}
+		.count{
+			margin-top: 25px;
+		}
+		.small{
+			width: 15%;
+			margin-right: 5%;
+			margin-bottom: 5%;
+		}
+		.quote-sign{
+			height: 50px;
+			width: 10%;
+			margin-right: 10px;
+		}
+		.text-box{
+			width: 80%;
+			span{
+				margin-left: 10px;
+			}
+		}
+		.quote{
+			.mg-top{
+				margin-top: 7px;
+			}
+		}
+
+	}
+}
+.w40{
+	width: 49%;
+}

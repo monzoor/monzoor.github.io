@@ -1,0 +1,51 @@
+#signup{
+  @extend %clearfix;
+  @extend .font__color--secondary;
+  #social{
+    a{
+      display: block;
+      padding-top: 10px;
+      width: 90%;
+    }
+  }
+  .content__info__wrapper--half-with-gutter{
+  	input{
+  		padding-left: 4%;
+  		padding-right: 0%;
+  	}
+  }
+}
+
+.login__container {
+  .login__container--social{
+    @include column(5/12, $gutter: 0);
+  }
+  .login__container--separator--mannual{
+    @include column(7/12, $gutter: 0);
+    .login__container--separator {
+      @include column(3/12, $gutter: 0);
+      .login__container--separator--box {
+        position: relative;
+        width: 0px;
+        border-left: 1px dashed $button-border;  
+        margin: 0 auto;
+        min-height: 75vh;  
+      }
+    }
+    .login__container--mannual {
+      @include column(9/12, $gutter: 0);
+    }
+  }
+}
+#login {
+	@extend #signup;
+	.login__container {
+	  .login__container--separator--mannual{
+	    .login__container--separator {
+	      .login__container--separator--box {
+	        min-height: 400px !important;;  
+	      }
+	    }
+	  }
+	}
+}

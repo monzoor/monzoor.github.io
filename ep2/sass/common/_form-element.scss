@@ -1,0 +1,409 @@
+form {
+  @include stack(0);
+  width: 100%;
+  margin: 0;
+  >a{
+    font-size: 14px;
+    display: inline-block;
+  }
+}
+input{
+  border: 0;
+  box-shadow: 0px 0px 0px #fff;
+}
+label{
+  font-size: 14px;
+  font-weight: 600;
+  display: block;
+  cursor: inherit;
+  margin-bottom: 8px;
+}
+textarea{
+  @include border-top-radius(3px);
+  @include border-right-radius(3px);
+  @include border-bottom-radius(3px);
+  @include border-left-radius(3px); 
+  &.width--full{
+    width: 100%;
+  }
+}
+.input--text, 
+input[type=text],
+input[type=password]{
+  outline: 0;
+  font-size: 14px;
+  background-clip: padding-box;
+  position: relative;
+  padding: 9px 2%;
+  width: 96%;
+  @include border-top-radius(3px);
+  @include border-right-radius(3px);
+  @include border-bottom-radius(3px);
+  @include border-left-radius(3px); 
+  @include transition-property(background,border);
+  @include transition-duration(.3s);
+  @include placeholder {
+    font-size: 14px;
+  }
+  &.width--small {
+    width: 92%;
+    padding: 9px 4%;
+  }
+  &.width--half{
+    width: 40%;
+    float: left;
+  }
+}
+
+input[type=text], textarea, input[type=password] {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+}
+ 
+input[type=text]:focus, textarea:focus, input[type=password]:focus {
+  box-shadow: 0 0 10px rgba($button-selected, 1);
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  height: 33px;
+  width: 100%;
+  background: $white;
+  border: 1px solid;
+  @include border-top-radius(3px);
+  @include border-right-radius(3px);
+  @include border-bottom-radius(3px);
+  @include border-left-radius(3px); 
+}
+
+.dropdown:after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: 5px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #888888;
+  pointer-events: none;
+}
+
+.dropdown:before {
+  border-bottom-style: solid;
+  border-top: none;
+}
+
+.dropdown:after {
+  margin-top: 11px;
+  border-top-style: solid;
+  border-bottom: none;
+}
+
+.dropdown-select {
+  position: relative;
+  width: 130%;
+  margin: 0;
+  padding: 7px 8px 6px 10px;
+  height: 33px;
+  line-height: 14px;
+  font-size: 12px;
+  color: #62717a;
+  text-shadow: 0 1px white;
+  background: #f2f2f2; /* Fallback for IE 8 */
+  background: rgba(0, 0, 0, 0) !important; /* "transparent" doesn't work with Opera */
+  border: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+.dropdown-select:focus {
+  z-index: 3;
+  width: 100%;
+  outline: 2px solid $button-selected;
+  outline: 2px solid $button-selected;
+  outline-offset: -2px;
+}
+
+.dropdown-select > option {
+  margin: 3px;
+  padding: 6px 8px;
+  text-shadow: none;
+  background: #f2f2f2;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Fix for IE 8 putting the arrows behind the select element. */
+
+.lt-ie9 .dropdown {
+  z-index: 1;
+}
+
+.lt-ie9 .dropdown-select {
+  z-index: -1;
+}
+
+.lt-ie9 .dropdown-select:focus {
+  z-index: 3;
+}
+
+/* Dirty fix for Firefox adding padding where it shouldn't. */
+
+@-moz-document url-prefix() {
+  .dropdown-select {
+    padding-left: 6px;
+  }
+}
+
+
+
+$primaryColor: $text;
+$secondaryColor: $button-selected;
+
+.label--checkbox,
+.label--radio {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  .label--checkbox-text {
+    margin-top: 0px;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+.checkbox {
+  position: relative;
+  margin: 0 12px 0 0 ;
+  cursor: pointer;
+  &:before {
+    @include transition(transform .4s cubic-bezier(.45,1.8,.5,.75));
+    @include transform(rotate(-45deg) scale(0, 0));
+    content: "";
+    position: absolute;
+    left: rem(3);
+    top: rem(2);
+    z-index: 1;
+    width: rem(12);
+    height: rem(6);
+    border: 1px solid $primaryColor; 
+    border-top-style: none;
+    border-right-style: none;
+  }
+  
+  &:checked {
+    &:before {
+      @include transform(rotate(-45deg) scale(1, 1));
+    } 
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: rem(-2);
+    left: 0;
+    width: 1rem;
+    height: 1rem;
+    background: #fff;
+    border: 1px solid $secondaryColor;
+    cursor: pointer;
+  }
+}
+
+
+.checkbox2 {
+  position: relative;
+  margin: 0 12px 0 0 ;
+  cursor: pointer;
+  float: left;
+  &:before {
+    // @include transition(transform .4s cubic-bezier(.45,1.8,.5,.75));
+    // @include transform(rotate(-45deg) scale(0, 0));
+    font-family: 'epistocracy';
+    content: "\e616";
+    position: absolute;
+
+    z-index: 1;
+    color: $green;
+    left: -6px;
+    top: -3px;
+    font-size: 17px;
+    display: none;
+    background: #fff;
+  }
+  
+  &:checked {
+    &:after {
+      display: none;
+    }
+    &:before {
+      display: block;
+    } 
+
+  }
+  &:checked + .label--checkbox-text{
+      text-decoration: line-through;
+      color: $green;
+      &:after{
+        content: "";
+        border-bottom: 1px solid $green;
+        width: 100%;
+        display: block;
+        margin-top: -6px;
+        margin-bottom: 5px;
+      }
+    }
+  &:after {
+    display: block;
+    content: "\e617";
+    font-family: 'epistocracy';
+    font-size: 17px;
+    position: absolute;
+    background: #fff;
+    cursor: pointer;
+    left: -6px;
+    top: -3px;
+    @include border-top-radius(5px);
+    @include border-right-radius(5px);
+    @include border-bottom-radius(5px);
+    @include border-left-radius(5px);
+  }
+}
+.checkbox2 + .label--checkbox-text {
+  float: left;
+  margin-top: -7px;
+}
+
+
+
+.select-wrap {
+  display: block;
+  padding: 0;
+  text-align: left;
+  background-color: #FFF;
+  position: relative;
+  width: 100px;
+  @include border-top-radius(5px);
+  @include border-right-radius(5px);
+  @include border-bottom-radius(5px);
+  @include border-left-radius(5px);
+  color: #49758E;
+  &:after {
+      font-family: 'epistocracy';
+      content: "\e618";
+      width: 0px;
+      height: 24px;
+      border-left: 1px solid #49758E;
+      font-size: 28px;
+      float: right;
+      margin-right: 38px;
+      margin-top: -25px;
+  }
+}
+
+.input-select {
+  color: #49758E;
+
+  padding: 0.6em 0.9em;
+  width: 120%;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-sizing: border-box;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border-right: 1px solid #49758E;
+  appearance: none;
+  transition: border-color 400ms, box-shadow 400ms;
+}
+
+
+
+
+
+.radio {
+  position: relative;
+  margin: 0 1rem 0 0 ;
+  cursor: pointer;
+  &:before {
+    @include transition(transform .4s cubic-bezier(.45,1.8,.5,.75));
+    @include transform(scale(0,0));
+    content: "";
+    position: absolute;
+    top: 0;
+    left: rem(2);
+    z-index: 1;
+    width: rem(12);
+    height: rem(12);
+    background: $primaryColor;
+    border-radius: 50%;
+  }
+  
+  &:checked {
+    &:before {
+     @include transform(scale(1,1)); 
+    }
+  }
+  
+  &:after {
+    content: "";
+    position: absolute;
+    top: rem(-4);
+    left: rem(-2);
+    width: 1rem;
+    height: 1rem;
+    background: #fff;
+    border: 2px solid $secondaryColor;
+    border-radius: 50%;
+  }
+}
+
+
+// @import "compass/css3";
+
+// @import url(http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+$iconColor: #fff;
+$color: #8FC357;
+.search {
+  width: 100%;
+  position: relative;
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-family: 'epistocracy';
+    content: '\e61b';
+    background: transparent;
+    text-align: center;
+    color: $text-hints;
+    border-left: 1px solid $text-hints;
+  }
+}
+.searchTerm {
+  width: 96%;
+  border: 1px solid $button-border;
+  padding: 2%;
+  height: 20px;
+  outline: none;
+}
+.searchButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  cursor: pointer;
+}

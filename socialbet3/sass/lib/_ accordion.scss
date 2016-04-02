@@ -1,0 +1,65 @@
+.ui-widget-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.ui-accordion .ui-accordion-header {
+	font-family: "PT Sans", sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	display: block;
+	cursor: pointer;
+	position: relative;
+	margin: 2px 0 0 0;
+	padding: .5em .5em .5em .7em;
+	min-height: 0; /* support: IE7 */
+}
+.ui-accordion .ui-accordion-icons {
+	padding-left: 2.2em;
+}
+.ui-accordion .ui-accordion-icons .ui-accordion-icons {
+	padding-left: 2.2em;
+}
+.ui-accordion .ui-accordion-header .ui-accordion-header-icon {
+	position: absolute;
+	left: .5em;
+	top: 50%;
+	margin-top: -8px;
+}
+.ui-accordion .ui-accordion-content {
+	border-top: 0;
+	overflow: auto;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-state-active,
+.ui-accordion-header-active {
+	border: 1px solid #37C0C6;
+	background: #37C0C6;
+	font-weight: normal;
+	color: #ffffff;
+}
+
+
+
+
+.ui-state-default .ui-icon {
+	font-family: 'icomoon';
+	font-size: 14px;
+	&:before{
+		content: "\e602";
+	}
+}
+
+.ui-state-active .ui-icon {
+	font-family: 'icomoon';
+	font-size: 14px;
+	&:before{
+		content: "\e605";
+	}
+}
+

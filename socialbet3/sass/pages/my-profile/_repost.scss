@@ -1,0 +1,16 @@
+.repost-wrapper{
+	width: 100%;
+	height: auto;
+	background-color: $White;
+	margin-top: 10px;
+	@include clearfix;
+	.sub-comment{
+		border-left: 4px solid $Brand-blue;
+		padding-left: 10px;
+	}
+	.like-box {
+		&.mg-top{
+			margin-top: 20px;
+		}
+	}
+}

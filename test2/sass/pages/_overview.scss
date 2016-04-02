@@ -1,0 +1,21 @@
+.overview {
+  height: auto;
+  background-image: url("../images/W6T0A7NDTF.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: white !important;
+  padding-bottom: 80px;
+  @include responsive(mobile) {
+    height: auto;
+    padding-bottom: 80px;
+  }
+  @include responsive(tab-portrait) {
+    height: auto;
+    padding-bottom: 80px;
+  }
+  @include responsive(tab-landscape) {
+    height: auto;
+    padding-bottom: 80px;
+  }
+}

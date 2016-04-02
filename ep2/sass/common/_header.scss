@@ -1,0 +1,58 @@
+header {
+  @extend .background__color--royal-blue;
+  height: 67px;
+  .logo{
+    width: 16%;
+    margin-top: 15px;
+    @extend %clearfix;
+    @extend .display--inblock;
+    @extend .float--left;
+    i{
+      font-size: 40px;
+    }
+  }
+  nav {
+    width: 84%;
+    margin-top: 15px;
+    >ul{
+      margin-left: 15px;
+      margin-top: 10px;
+    }
+    li{
+      @extend %color__font__dark-bg--main;
+      @extend .display--inblock;
+      @extend .margin__right--12;
+      margin-left: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    a {
+      @extend %color__font__dark-bg--main;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .right__nav{
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .user__name {
+        vertical-align: 13px;
+    }
+    .follower__count {
+        vertical-align: 8px;
+        font-size: 30px;
+    }
+    .notification{
+      margin-left: 10px;
+      padding: 0px 12px;
+      background-color: $darkbg-text-main;
+      @include border-top-radius(10px);
+      @include border-right-radius(10px);
+      @include border-bottom-radius(10px);
+      @include border-left-radius(10px);
+      text-align: center;
+      display: inline-block;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+// // display
+@include responsive(mobile){
+	.tab-por-view{display: none;}
+	.tab-view{display: none;}
+
+	.t-d-view{display: none;}
+	.mob-view{display: block;}
+	.only-mob-hide{display: none;}
+	.desktop-view{display: none;}
+	.mobile-hide{display: none !important;}
+	.t-m-view{display: block;}
+}
+
+@include responsive(big-mobile){
+	.tab-por-view{display: none;}
+	.tab-view{display: none;}
+
+	.t-d-view{display: none;}
+	.mob-view{display: block;}
+	.desktop-view{display: none;}
+	.mobile-hide{display: none !important;}
+	.t-m-view{display: block;}
+
+}
+
+@include responsive(tab-portrait){
+	
+	
+	.mob-view{display: none;}
+	.tab-view{display: block;}
+	.t-d-view{display: block;}
+	.tab-por-view{display: block;}
+	.desktop-view{display: none;}
+	.tab-por-no-view{display: none;}
+	.t-m-view{display: block;}
+}
+
+@include responsive(tab-landscape){
+	.tab-por-view{display: none;}
+
+	.mob-view{display: none;}
+	.tab-view{display: block;}
+	.t-d-view{display: block;}
+	.desktop-view{display: none;}
+	.tab-landscape-no-view{ display: none;}
+	.t-m-view{display: block;}
+}
+
+@include responsive(small-desktop){
+	.tab-por-view{display: none;}
+	.tab-view{display: none;}
+
+	.mob-view{display: none;}
+	.t-d-view{display: block;}
+	.desktop-view{display: block;}
+	.t-m-view{display: none;}
+}
+
+@include responsive(desktop){
+	.tab-por-view{display: none;}
+	.tab-view{display: none;}
+
+	.mob-view{display: none;}
+	.t-d-view{display: block;}
+	.desktop-view{display: block;}
+	.t-m-view{display: none;}
+}
+
+@include responsive(big-desktop){
+	.tab-por-view{display: none;}
+	.tab-view{display: none;}
+
+	.mob-view{display: none;}
+	.t-d-view{display: block;}
+	.desktop-view{display: block;}
+	.t-m-view{display: none;}
+}
+.menu-mrg-left-z{
+	margin-left: 0;
+}
+.menu-mrg-left-n{
+	margin-left: -45%;
+}

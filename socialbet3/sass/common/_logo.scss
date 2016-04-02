@@ -1,0 +1,31 @@
+.logo-wrapper{
+	width: 100%;
+	height: 81px;
+	@include clearfix;
+	background-color: $Brand-red;
+	background-image: url("../../images/logo.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	a{
+		display: block;
+	}
+	img{
+		width: 100%;
+		visibility: hidden;
+
+	}
+}
+
+@include responsive(tab-landscape){
+	.logo-wrapper{
+		background-position-x: -16px;
+		background-size: 114% 100%;
+	}
+}
+@include responsive(tab-portrait){
+	.logo-wrapper{
+		background-image: url("../../images/logo-small.jpg");
+		background-size: 100% 100%;	
+	}
+}

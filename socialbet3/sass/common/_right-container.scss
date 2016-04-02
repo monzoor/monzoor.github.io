@@ -1,0 +1,27 @@
+.right-container-wrapper{
+	width: 12.9%;
+	height: auto;
+	background-color: $White;
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-top: 20px;
+	@extend .fr;
+	@include clearfix;
+	-webkit-box-shadow: -1px 0px 5px 0px rgba(0, 0, 0, 0.13);
+	-moz-box-shadow:    -1px 0px 5px 0px rgba(0, 0, 0, 0.13);
+	box-shadow:         -1px 0px 5px 0px rgba(0, 0, 0, 0.13);
+	h1{
+		width: 100%;
+		@include clearfix;
+		padding-bottom: 10px;
+		border-bottom: 4px solid $Dark-gray;
+		color: $Dark-gray;
+		display: table-cell;
+	}
+}
+
+.right-container-wrapper-2col{
+	width: 26%;
+	padding: 0;
+	@extend .right-container-wrapper;
+}
